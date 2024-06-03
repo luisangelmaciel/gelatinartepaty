@@ -1,5 +1,3 @@
 module.exports = {
-  eleventyComputed: {
-    permalink: () => "/search.json",
-  },
+  permalink: "search.json",
 };

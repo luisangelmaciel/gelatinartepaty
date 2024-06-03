@@ -151,5 +151,23 @@ module.exports = function(eleventyConfig) {
 			};
 		});
 	});
+	eleventyConfig.addCollection("searchData", collection => {
+  return collection.getFilteredByGlob("./content/*.md").map(item => {
+    return {
+      title: item.data.title,
+      content: item.templateContent,
+      url: item.url,
+      excerpt: item.data.excerpt || "",
+    };
+  });
+});
+
+eleventyConfig.addTemplateFormats("json");
+
+eleventyConfig.addNunjucksAsyncFilter("searchDataJson", async function () {
+  const searchData = await eleventyConfig.getCollection("searchData");
+  return JSON.stringify(searchData);
+});
+
 	
 };
