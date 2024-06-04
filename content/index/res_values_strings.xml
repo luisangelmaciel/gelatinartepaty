@@ -1,0 +1,7 @@
+<!-- res/values/strings.xml -->
+<resources>
+    <string name="shortcut_registrar_hito">Registrar Hito</string>
+    <string name="shortcut_registrar_hito_long">Registrar un nuevo hito</string>
+    <string name="shortcut_registrar_entrada_diario">Entrada de Diario</string>
+    <string name="shortcut_registrar_entrada_diario_long">Registrar una entrada de diario</string>
+</resources>

@@ -1,0 +1,26 @@
+<!-- res/xml/shortcuts.xml -->
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="id_registrar_hito"
+        android:enabled="true"
+        android:icon="@drawable/ic_hito"
+        android:shortcutShortLabel="@string/shortcut_registrar_hito"
+        android:shortcutLongLabel="@string/shortcut_registrar_hito_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.tu.app"
+            android:targetClass="com.tu.app.RegistrarHitoActivity" />
+    </shortcut>
+    <shortcut
+        android:shortcutId="id_registrar_entrada_diario"
+        android:enabled="true"
+        android:icon="@drawable/ic_diario"
+        android:shortcutShortLabel="@string/shortcut_registrar_entrada_diario"
+        android:shortcutLongLabel="@string/shortcut_registrar_entrada_diario_long">
+        <intent
+            android:action="android.intent.action.VIEW"
+            android:targetPackage="com.tu.app"
+            android:targetClass="com.tu.app.RegistrarEntradaDiarioActivity" />
+    </shortcut>
+</shortcuts>
