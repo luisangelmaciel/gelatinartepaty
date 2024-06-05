@@ -1,6 +1,6 @@
 ---
 title: "Deliciosas gelatinas personalizadas: ¡endulza tu evento con creatividad!"
-description: ""Descubre cómo hacer gelatinas personalizadas que sorprenderán a todos. Ideas, recetas y consejos para dar un toque único a tus postres. ¡Entra ya!"
+description: "Descubre cómo hacer gelatinas personalizadas que sorprenderán a todos. Ideas, recetas y consejos para dar un toque único a tus postres. ¡Entra ya!"
 date: 2024-05-06
 tags: Ideas, consejos
 draft: 
