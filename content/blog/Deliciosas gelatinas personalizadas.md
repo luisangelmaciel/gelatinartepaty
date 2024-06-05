@@ -59,14 +59,13 @@ draft:
 <body class="dark:bg-slate-900">
   <!-- ========== MAIN CONTENT ========== -->
   <main lindo-main-content id="content" role="main" class="font-default bg-base-50">
-
-                      <!-- Navbar --> 
-    <header lindo-section="_header_align_right7094" lindo-variation="3">
+        <!-- Navbar --> 
+      <header lindo-section="_header_align_right2658" lindo-variation="1">
         <div data-wow-duration="0.3s" lindo-animate="fadeInUp" data-wow-delay="0.1s" class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
           <nav class="my-6 relative max-w-7xl w-full mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-gray-800 dark:border-gray-700" aria-label="Global">
             <div class="flex items-center justify-between">
-              <span class="flex-none text-xl font-semibold dark:text-white">
-                <img class="inline-block h-10 h-logo" src="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-full-256x.png" lindo-image-logo="full" lindo-img-size="600x200" alt="Logo Full">
+              <span class="flex-none text-xl  dark:text-white">
+                <img class="inline-block h-10 h-logo" src="https://gelatinartepaty.vercel.app/img/favicon.png" lindo-image-logo="full" lindo-img-size="600x200" alt="GelatinArte Pa´ty"><span class="font-semibold"> G</span>elatin<span class="font-semibold">arte</span> <span class="font-semibold">Pa´ty</span> 
               </span>
               <div class="md:hidden">
                 <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-full border border-base-200 font-medium bg-base-50 text-base-900/70 shadow-sm align-middle hover:bg-base-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary-500 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
@@ -80,21 +79,21 @@ draft:
               </div>
             </div>
             <div id="navbar-collapse-with-animation" class="hs-collapse hidden transition-all duration-300 basis-full grow md:block">
-              <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-                <a lindo-btn="_header_align_right7094_link1" lindo-btn-href="_header_align_right7094_link1_url"  href="/" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Home</span>
+              <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">                
+                <a lindo-btn="_header_align_right2658_link2" lindo-btn-href="_header_align_right2658_link2_url"  href="#services" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Servicios</span>
                 </a>
-                <a lindo-btn="_header_align_right7094_link2" lindo-btn-href="_header_align_right7094_link2_url"  href="/services" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Services</span>
-                </a>
-                <a lindo-btn="_header_align_right7094_link3" lindo-btn-href="_header_align_right7094_link3_url"  href="/articles" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Articles</span>
+                <a lindo-btn="_header_align_right2658_link3" lindo-btn-href="_header_align_right2658_link3_url"  href="#articles" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Blog</span>
                 </a>  
-                <a lindo-btn="_header_align_right7094_link4" lindo-btn-href="_header_align_right7094_link4_url"  href="/about" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>About</span>
+                <a lindo-btn="_header_align_right2658_link3" lindo-btn-href="_header_align_right2658_link3_url"  href="#about" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Sobre Gelatinarte Pa´ty</span>
+                </a>  
+                <a lindo-btn="_header_align_right2658_link5" lindo-btn-href="_header_align_right2658_link5_url"  href="/contact" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Contacto</span>
                 </a>
-                <a lindo-btn="_header_align_right7094_link5" lindo-btn-href="_header_align_right7094_link5_url"  href="/contact" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Contact</span>
+                <a lindo-btn="_header_align_right2658_cta cta-button"  lindo-btn-href="_header_align_right2658_cta_url"  href="#contacto"  class="inline-flex justify-center items-center gap-x-3 text-center bg-primary-500 hover:opacity-90 text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2  focus:ring-offset-2 focus:ring-offset-base-50 py-4 px-8 dark:focus:ring-offset-gray-800  cta-button">
+                  <span lindo-btn-text >Cotizar</span>
                 </a>
               </div>
             </div>

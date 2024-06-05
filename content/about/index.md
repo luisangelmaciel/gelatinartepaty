@@ -1,65 +1,122 @@
-
 <!DOCTYPE html>
-<!-- ✨ Built with LindoAi • https://www.lindoai.com/ -->
-<html class="">
+<html lang="es-MX">
 
 <head>
-  <!-- Required Meta Tags Always Come First -->
+  <!-- Metadata General -->
   <meta charset="utf-8">
-  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="¡Claro! Aquí tienes una propuesta de meta descripción SEO para Gelatinas Yolanda:"Descubre nuestras exquisitas gelatinas artísticas personalizadas, elaboradas con técnicas avanzadas para eventos especiales. ¡Variedad de sabores y formas únicas! 🍮🎉" Esta descripción destaca la personalización de las gelatinas, su calidad y variedad, lo que puede atraer a potenciales clientes interesados en productos únicos y de calidad para eventos especiales">
-  <meta name="lindo-page-setting" 
-  template-type="Web Page" 
-  template-name="About" 
-   page-type="page"
-   id="recKa8LqvrCuSpyo5" 
-   template-id="about"
-   theme-font="Inter"
-   theme-palette="Indigo"
-   theme-mode="Light">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Gelatinas Personalizadas Artesanales - Gelatinas Yolanda">
-  <meta name="twitter:description" content="¡Claro! Aquí tienes una propuesta de meta descripción SEO para Gelatinas Yolanda:"Descubre nuestras exquisitas gelatinas artísticas personalizadas, elaboradas con técnicas avanzadas para eventos especiales. ¡Variedad de sabores y formas únicas! 🍮🎉" Esta descripción destaca la personalización de las gelatinas, su calidad y variedad, lo que puede atraer a potenciales clientes interesados en productos únicos y de calidad para eventos especiales">
-  <meta name="twitter:image" content="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-full-256x.png">
-
-  <meta property="og:title" content="Gelatinas Personalizadas Artesanales - Gelatinas Yolanda">
-  <meta property="og:description" content="¡Claro! Aquí tienes una propuesta de meta descripción SEO para Gelatinas Yolanda:"Descubre nuestras exquisitas gelatinas artísticas personalizadas, elaboradas con técnicas avanzadas para eventos especiales. ¡Variedad de sabores y formas únicas! 🍮🎉" Esta descripción destaca la personalización de las gelatinas, su calidad y variedad, lo que puede atraer a potenciales clientes interesados en productos únicos y de calidad para eventos especiales">
-  <meta property="og:image" content="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-full-256x.png">
+  <meta name="description" content="Descubre Gelatinas Yolanda, expertos en gelatinas artísticas personalizadas, con variedad de sabores y formas para eventos especiales. ¡Sorprende a tus invitados! 🍮🎉">
+  <meta name="keywords" content="Gelatinas artísticas personalizadas, postres para eventos, gelatinas temáticas, postres personalizados, gelatinas únicas, gelatinas de alta calidad, gelatinas creativas, gelatinas originales, gelatinas para celebraciones, gelatinas gourmet">
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gelatinartepaty.vercel.app/">
+  <link rel="alternate" href="https://gelatinartepaty.vercel.app" hreflang="es-MX">
 
   <!-- Title -->
-  <title>Gelatinas Personalizadas Artesanales - Gelatinas Yolanda</title>
+  <title>Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX</title>
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-sqr-256x.png">
-  <link href="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/css/recKa8LqvrCuSpyo5-20240530T074923Z.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="https://gelatinartepaty.vercel.app/img/favicon.png">
 
-  <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=bJMdKO-V8Xrd2NoqOBTOwoswwbUpZkMMM3MAfYtYcmEU6GbUflimSjztA1o2sKjP38IIenBHQodbquXe8PNQBg" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9nZWxhdGluYXN5b2xhbmRhLmxpbmRvYWkuY29tL2Fib3V0"/><script>
-    var _global_icons_config = {};
+  <!-- CSS -->
+  <link href="https://gelatinartepaty.vercel.app/css/recQnpw3RMnkXoxNd-20240530T002932Z.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://gelatinartepaty.vercel.app/css/animate.css">
+  <link href="https://gelatinartepaty.vercel.app/css/recU7N42rhDKwKjVO-20240530T080345Z.css" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css&display=swap">
+  <link rel="stylesheet" href="https://gelatinartepaty.vercel.app/css/main.min.css?v=2.3.0">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- JS Implementing Plugins -->
+  <script src="https://gelatinartepaty.vercel.app/js/preline.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Open Graph (OG) -->
+  <meta property="og:title" content="Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX">
+  <meta property="og:description" content="Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.">
+  <meta property="og:image" content="URL_de_tu_imagen_principal">
+  <meta property="og:url" content="https://gelatinartepaty.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gelatinarte Pa´ty">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX">
+  <meta name="twitter:description" content="Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.">
+  <meta name="twitter:image" content="https://gelatinartepaty.vercel.app/img/ogimage.jpg">
+  <meta name="twitter:site" content="@GelatinasArteCDMX">
+  <meta name="twitter:creator" content="@luisangelmaciel">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gelatinas Artísticas Personalizadas Gelatinarte Pa´ty",
+    "description": "Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.",
+    "image": "https://gelatinartepaty.vercel.app/img/ogimage.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cobre 239-No.",
+      "addressLocality": "Popular Rastro, Venustiano Carranza, Ciudad de México, CDMX",
+      "postalCode": "15220",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "19.4523887",
+      "longitude": "-99.1178247"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00, Su 11:00-15:00",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+52 55 3951 4852",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://twitter.com/GelatinasArteCDMX"
+    ]
+  }
   </script>
-  <!-- Custom Code -->
-  <!-- Right the code here. It will be replace before end of the </head> tag. --> 
 
+  <!-- CSS for CTA Button -->
   <style>
-    [lindo-animate] {
-      visibility: hidden;
+    .cta-button {
+        background-color: #FF6F61;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        margin: 20px 0;   
+        text-decoration: none;
+        font-weight: bold; 
+    }
+    .cta-button:hover {
+        background-color: #E55B50;
     }
   </style>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gelatinartepaty.vercel.app">
+
+  <!-- Category -->
+  <meta name="category" content="Food & Beverage, Desserts, Event Services">
+  
 </head>
-
-
 <body class="dark:bg-slate-900">
   <!-- ========== MAIN CONTENT ========== -->
   <main lindo-main-content id="content" role="main" class="font-default bg-base-50">
-
                       <!-- Navbar --> 
-    <header lindo-section="_header_align_right5680" lindo-variation="3">
+       <!-- Navbar --> 
+      <header lindo-section="_header_align_right2658" lindo-variation="1">
         <div data-wow-duration="0.3s" lindo-animate="fadeInUp" data-wow-delay="0.1s" class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
           <nav class="my-6 relative max-w-7xl w-full mx-2 py-3 px-4 md:flex md:items-center md:justify-between md:py-0 md:px-6 lg:px-8 xl:mx-auto dark:bg-gray-800 dark:border-gray-700" aria-label="Global">
             <div class="flex items-center justify-between">
-              <span class="flex-none text-xl font-semibold dark:text-white">
-                <img class="inline-block h-10 h-logo" src="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-full-256x.png" lindo-image-logo="full" lindo-img-size="600x200" alt="Logo Full">
+              <span class="flex-none text-xl  dark:text-white">
+                <img class="inline-block h-10 h-logo" src="https://gelatinartepaty.vercel.app/img/favicon.png" lindo-image-logo="full" lindo-img-size="600x200" alt="GelatinArte Pa´ty"><span class="font-semibold"> G</span>elatin<span class="font-semibold">arte</span> <span class="font-semibold">Pa´ty</span> 
               </span>
               <div class="md:hidden">
                 <button type="button" class="hs-collapse-toggle p-2 inline-flex justify-center items-center gap-2 rounded-full border border-base-200 font-medium bg-base-50 text-base-900/70 shadow-sm align-middle hover:bg-base-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-primary-500 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
@@ -73,27 +130,27 @@
               </div>
             </div>
             <div id="navbar-collapse-with-animation" class="hs-collapse hidden transition-all duration-300 basis-full grow md:block">
-              <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">
-                <a lindo-btn="_header_align_right5680_link1" lindo-btn-href="_header_align_right5680_link1_url"  href="/" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Home</span>
+              <div class="flex flex-col gap-y-4 gap-x-0 mt-5 md:flex-row md:items-center md:justify-end md:gap-y-0 md:gap-x-7 md:mt-0 md:pl-7">                
+                <a lindo-btn="_header_align_right2658_link2" lindo-btn-href="_header_align_right2658_link2_url"  href="#services" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Servicios</span>
                 </a>
-                <a lindo-btn="_header_align_right5680_link2" lindo-btn-href="_header_align_right5680_link2_url"  href="/services" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Services</span>
-                </a>
-                <a lindo-btn="_header_align_right5680_link3" lindo-btn-href="_header_align_right5680_link3_url"  href="/articles" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Articles</span>
+                <a lindo-btn="_header_align_right2658_link3" lindo-btn-href="_header_align_right2658_link3_url"  href="#articles" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Blog</span>
                 </a>  
-                <a lindo-btn="_header_align_right5680_link4" lindo-btn-href="_header_align_right5680_link4_url"  href="/about" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>About</span>
+                <a lindo-btn="_header_align_right2658_link3" lindo-btn-href="_header_align_right2658_link3_url"  href="#about" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Sobre Gelatinarte Pa´ty</span>
+                </a>  
+                <a lindo-btn="_header_align_right2658_link5" lindo-btn-href="_header_align_right2658_link5_url"  href="/contact" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
+                  <span lindo-btn-text>Contacto</span>
                 </a>
-                <a lindo-btn="_header_align_right5680_link5" lindo-btn-href="_header_align_right5680_link5_url"  href="/contact" class="font-medium text-base-900 hover:text-primary-500" aria-current="page">
-                  <span lindo-btn-text>Contact</span>
+                <a lindo-btn="_header_align_right2658_cta cta-button"  lindo-btn-href="_header_align_right2658_cta_url"  href="#contacto"  class="inline-flex justify-center items-center gap-x-3 text-center bg-primary-500 hover:opacity-90 text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2  focus:ring-offset-2 focus:ring-offset-base-50 py-4 px-8 dark:focus:ring-offset-gray-800  cta-button">
+                  <span lindo-btn-text >Cotizar</span>
                 </a>
               </div>
             </div>
           </nav>
         </div>
-      </header> <!-- Highlight -->
+      </header><!-- Highlight -->
  <section lindo-section="_highlight_a3422">
   <div class="max-w-[75rem] px-8 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto text-base-900">
 
