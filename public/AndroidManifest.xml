@@ -1,0 +1,19 @@
+<!-- AndroidManifest.xml -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tu.app">
+
+    <application
+        ... >
+        <activity
+            android:name=".MainActivity">
+            ...
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+
+        <!-- Declara las actividades para los accesos directos -->
+        <activity android:name=".RegistrarHitoActivity" />
+        <activity android:name=".RegistrarEntradaDiarioActivity" />
+    </application>
+</manifest>
