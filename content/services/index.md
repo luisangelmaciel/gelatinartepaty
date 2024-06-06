@@ -365,10 +365,10 @@ pb-2">
   <!-- End Col -->
   <div class="flex flex-col gap-6">
     <div class="flex flex-wrap gap-6 justify-start md:justify-end">            
-      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/services.html" lindo-btn="_block_35f22840_btn_text_2" lindo-btn-href="_block_35f22840_btn_href_2"><span lindo-btn-text="" class="">Servicios</span></a></p>
-      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/blog.html" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Blog</span></a></p>            
-      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/about.html" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Sobre Gelatinarte Pa´ty</span></a></p>            
-      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="contacto.html" lindo-btn="_block_35f22840_btn_text_5" lindo-btn-href="_block_35f22840_btn_href_5"><span lindo-btn-text="" class="">Contacto</span></a></p>  
+      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/services" lindo-btn="_block_35f22840_btn_text_2" lindo-btn-href="_block_35f22840_btn_href_2"><span lindo-btn-text="" class="">Servicios</span></a></p>
+      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/blog" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Blog</span></a></p>            
+      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/about" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Sobre Gelatinarte Pa´ty</span></a></p>            
+      <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/contacto" lindo-btn="_block_35f22840_btn_text_5" lindo-btn-href="_block_35f22840_btn_href_5"><span lindo-btn-text="" class="">Contacto</span></a></p>  
     </div>
     <div class="flex flex-wrap gap-6 justify-start md:justify-end text-sm">
       <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/privacy" lindo-btn="_block_35f22840_btn_text_7" lindo-btn-href="_block_35f22840_btn_href_7"><span lindo-btn-text="" class="">Política de privacidad</span></a></p>
@@ -430,8 +430,7 @@ pb-2">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdn.lindoai.com/css/animate.css">
-<script src="https://cdn.lindoai.com/js/wow.js"></script>
-<script src="https://cdn.lindoai.com/js/config.js"></script>
+
 
 <!-- Tabler Icons CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
