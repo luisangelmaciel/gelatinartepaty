@@ -200,7 +200,8 @@
   <div class="flex md:grid flex-col grid-cols-2 lg:flex-row py-14 lg:py-20 items-center justify-center gap-y-12 gap-x-32 max-w-[75rem] mx-auto px-8">
     <div class="col-span-1 w-full order-first lg:-order-none">
       <div class="">
-        <img  data-wow-duration="0.3s" lindo-animate="fadeInUp" data-wow-delay="0s" lindo-img-size="1200x1400" class="rounded-xl w-full" src="https://gelatinartepaty.vercel.app/img/2024/IMG_6753.webp" alt="Image Description" lindo-image="_block_vdct4875_image_1">
+        <img  data-wow-duration="0.3s" lindo-animate="fadeInUp" data-wow-delay="0s" lindo-img-size="1200x1400" class="rounded-xl w-full" 
+        src="https://gelatinartepaty.vercel.app/img/2024/IMG_6753.webp" alt="Image Description" lindo-image="_block_vdct4875_image_1">
       </div>          
     </div>
     <div class="col-span-1 flex flex-col gap-y-3">
@@ -217,7 +218,7 @@
       <div class="md:grid md:grid-cols-2 md:items-center md:gap-12 xl:gap-16">
           <div>
           <div class="group relative rounded-xl overflow-hidden h-[400px] md:h-[600px]">
-              <img data-wow-duration="0.3s"  lindo-animate="fadeInUp" class="rounded-xl" lindo-image="_feature_g8586_image" src="<img class="w-full sm:size-40 object-cover" src="" alt="Gelatinarte Paty"> </div>"
+              <img data-wow-duration="0.3s"  lindo-animate="fadeInUp" class="rounded-xl" lindo-image="_feature_g8586_image" src="https://gelatinartepaty.vercel.app/img/2024/IMG_6753.webp"
                   class="group-hover:scale-105 transition-transform duration-500 ease-in-out w-full h-full absolute top-0 left-0 object-cover rounded-xl"
                   lindo-img-size="800x800" alt="Image Description">
               </div>
@@ -302,7 +303,7 @@
       </div>
       <!-- End Grid -->        
   </div>
-</section><!-- Hero -->
+</section>
 <section lindo-section="_hero_a4475" lindo-variation="1">
   <div class="overflow-hidden before:absolute before:top-0 before:left-1/2 before:bg-no-repeat before:bg-top before:bg-cover before:w-full before:h-full before:-z-[1] before:transform before:-translate-x-1/2">
       <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-36">
@@ -325,73 +326,96 @@
         </div>        
   </div>
 </section>
-<!-- End Hero -->
-<footer lindo-section="_block_35f27828" class="bg-base-100" lindo-variation="1"><div class="text-base-900">
-  <div class="max-w-[75rem] py-10 px-4 sm:px-6 pt-0 lg:px-8 lg:pt-0 mx-auto">
-    <!-- Grid -->
-    <div class="flex flex-col lg:flex-row items-start justify-between gap-6 border-t border-base-50/20 pt-12">
-      <div class="">
-        <span class="flex-none text-xl font-semibold dark:text-base-50">
-          <img lindo-image-logo="full" lindo-img-size="600x200" class="h-8 h-logo" src="https://cdn.lindoai.com/c/recbhUz8BEUk2ubc9/images/logo-full-256x.png" alt="">
-        </span>
-      </div>
-      <!-- End Col -->
-      <div class="flex flex-col gap-6">
-        <div class="flex flex-wrap gap-6 justify-start md:justify-end">
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/" lindo-btn="_block_35f27828_btn_text_1" lindo-btn-href="_block_35f27828_btn_href_1"><span lindo-btn-text="" class="">Home</span></a></p>
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/services" lindo-btn="_block_35f27828_btn_text_2" lindo-btn-href="_block_35f27828_btn_href_2"><span lindo-btn-text="" class="">Services</span></a></p>
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/articles" lindo-btn="_block_35f27828_btn_text_3" lindo-btn-href="_block_35f27828_btn_href_3"><span lindo-btn-text="" class="">Articles</span></a></p>
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/about" lindo-btn="_block_35f27828_btn_text_4" lindo-btn-href="_block_35f27828_btn_href_4"><span lindo-btn-text="" class="">About</span></a></p>  
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/contact" lindo-btn="_block_35f27828_btn_text_5" lindo-btn-href="_block_35f27828_btn_href_5"><span lindo-btn-text="" class="">Contact</span></a></p>  
+    <footer lindo-section="_block_35f22840" lindo-variation="1"><div class="bg-base-100 text-base-900">
+    <div class="max-w-[75rem] py-10 px-4 sm:px-6 pt-0 lg:px-8 lg:pt-0 mx-auto">
+      <!-- Grid -->
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-6 border-t border-base-50/20 pt-12">
+        <div class="">
+          <span class="flex-none text-xl  dark:text-base-50" style="display: inline-block;">
+            <img lindo-image-logo="full" lindo-img-size="600x200" class="h-8 h-logo" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="GelatiArte Pa´ty" style="display: inline-block;"> <span class="font-semibold"> G</span>elatin<span class="font-semibold">arte</span> <span class="font-semibold">Pa´ty</span> 
+          </span>
         </div>
-        <div class="flex flex-wrap gap-6 justify-start md:justify-end text-sm">
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/privacy" lindo-btn="_block_35f27828_btn_text_7" lindo-btn-href="_block_35f27828_btn_href_7"><span lindo-btn-text="" class="">Privacy Policy</span></a></p>
-          <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="/cookie" lindo-btn="_block_35f27828_btn_text_8" lindo-btn-href="_block_35f27828_btn_href_8"><span lindo-btn-text="" class="">Cookie Policy</span></a></p>  
+        <!-- End Col -->
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-wrap gap-6 justify-start md:justify-end">            
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/services" lindo-btn="_block_35f22840_btn_text_2" lindo-btn-href="_block_35f22840_btn_href_2"><span lindo-btn-text="" class="">Servicios</span></a></p>
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/blog" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Blog</span></a></p>            
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/about" lindo-btn="_block_35f22840_btn_text_3" lindo-btn-href="_block_35f22840_btn_href_3"><span lindo-btn-text="" class="">Sobre Gelatinarte Pa´ty</span></a></p>            
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/contacto" lindo-btn="_block_35f22840_btn_text_5" lindo-btn-href="_block_35f22840_btn_href_5"><span lindo-btn-text="" class="">Contacto</span></a></p>  
+          </div>
+          <div class="flex flex-wrap gap-6 justify-start md:justify-end text-sm">
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/privacy" lindo-btn="_block_35f22840_btn_text_7" lindo-btn-href="_block_35f22840_btn_href_7"><span lindo-btn-text="" class="">Política de privacidad</span></a></p>
+            <p class=""><a class="inline-flex gap-x-2 text-base-800 hover:text-base-800/70 transition-all" href="https://gelatinartepaty.vercel.app/cookie" lindo-btn="_block_35f22840_btn_text_8" lindo-btn-href="_block_35f22840_btn_href_8"><span lindo-btn-text="" class="">Política de cookies</span></a></p>  
+          </div>
         </div>
+        <!-- End Col -->
+  
+  
+        <!-- End Col -->
       </div>
-      <!-- End Col -->
-
-
-      <!-- End Col -->
-    </div>
-    <!-- End Grid -->
-
-    <div class="grid gap-y-2 sm:gap-y-0 pt-8 sm:flex sm:justify-between sm:items-center">
-      <div class="flex justify-between items-center">
-        <p class="text-sm text-base-800"><span lindo-text="_block_35f27828_text_1" class="inline-block">© Made with ❤️</span></p>
+      <!-- End Grid -->
+  
+      <div class="grid gap-y-2 sm:gap-y-0 pt-8 sm:flex sm:justify-between sm:items-center">
+        <div class="flex justify-between items-center">
+          <p class="text-sm text-base-800"><span lindo-text="_block_35f22840_text_1" class="inline-block">© Hecho con ❤️ y mucha gelatina por <a href="http://www.yarticulospromocionales.com/" title="@luisangelmaciel">@lamp</a> </span></p>
+        </div>
+        <!-- End Col -->
+  
+        <!-- Social Brands -->
+        <div class="">
+          <a href="#twitter" aria-label="Twitter" lindo-setting-global="twitter" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" >
+            <i class="ti ti-brand-twitter text-[1.25rem]"></i>
+          </a>
+         <!--  <a lindo-setting-global="linkedin" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
+            <i class="ti ti-brand-linkedin text-[1.25rem]"></i>
+          </a> -->
+          <a href="#facebook" lindo-setting-global="facebook" aria-label="Facebook" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" >
+            <i class="ti ti-brand-facebook text-[1.25rem]"></i>
+          </a>
+          <a lindo-setting-global="instagram" aria-label="Instagram" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#instagram">
+            <i class="ti ti-brand-instagram text-[1.25rem]"></i>
+          </a>
+       <!-- <a lindo-setting-global="discord" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
+            <i class="ti ti-brand-discord text-[1.25rem]"></i>
+          </a> -->
+        </div>
+        <!-- End Social Brands -->
       </div>
-      <!-- End Col -->
-
-      <!-- Social Brands -->
-      <div class="">
-        <a lindo-setting-global="twitter" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
-          <i class="ti ti-brand-x text-[1.25rem]"></i>
-        </a>
-        <a lindo-setting-global="linkedin" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
-          <i class="ti ti-brand-linkedin text-[1.25rem]"></i>
-        </a>
-        <a lindo-setting-global="facebook" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
-          <i class="ti ti-brand-facebook text-[1.25rem]"></i>
-        </a>
-        <a lindo-setting-global="instagram" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
-          <i class="ti ti-brand-instagram text-[1.25rem]"></i>
-        </a>
-        <a lindo-setting-global="discord" class="inline-flex justify-center items-center gap-x-3.5 w-10 h-10 text-center text-base-800 hover:bg-white/[.1] rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 focus:ring-offset-base-900 transition" href="#">
-          <i class="ti ti-brand-discord text-[1.25rem]"></i>
-        </a>
-      </div>
-      <!-- End Social Brands -->
     </div>
   </div>
-</div></footer>  
+  </footer>   
 
-  </main>
+<!-- End Subscribe -->
+</main>
+
+
+       
   <button lindo-scroll-top class="hidden fixed bottom-4 right-4 w-12 h-12 bg-base-800 text-base-50 rounded-full flex items-center justify-center transition-opacity duration-300 opacity-0 hover:opacity-100">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
   </button>
   <!-- ========== END MAIN CONTENT ========== -->
+
+  <!-- JS Implementing Plugins -->
+  <script src="https://cdn.lindoai.com/js/preline.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.lindoai.com/css/animate.css">
+
+
+  <!-- Tabler Icons CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  
+  <!-- Custom Code -->
+  <!-- Right the code here. It will be replace before end of the </body> tag. --> 
+
 
   <!-- JS Implementing Plugins -->
   <script src="https://cdn.lindoai.com/js/preline.js"></script>

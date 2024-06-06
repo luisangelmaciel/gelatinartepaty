@@ -1,3 +1,226 @@
+
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <!-- Metadata General -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Descubre Gelatinas Yolanda, expertos en gelatinas artísticas personalizadas, con variedad de sabores y formas para eventos especiales. ¡Sorprende a tus invitados! 🍮🎉">
+  <meta name="keywords" content="Gelatinas artísticas personalizadas, postres para eventos, gelatinas temáticas, postres personalizados, gelatinas únicas, gelatinas de alta calidad, gelatinas creativas, gelatinas originales, gelatinas para celebraciones, gelatinas gourmet">
+  <meta name="author" content="Luis Angel Maciel">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://gelatinartepaty.vercel.app/">
+  <link rel="alternate" href="https://gelatinartepaty.vercel.app" hreflang="es-MX">
+
+  <!-- Title -->
+  <title>Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="https://gelatinartepaty.vercel.app/img/favicon.png">
+
+  <!-- CSS -->
+  <link href="https://gelatinartepaty.vercel.app/css/recQnpw3RMnkXoxNd-20240530T002932Z.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://gelatinartepaty.vercel.app/css/animate.css">
+  <link href="https://gelatinartepaty.vercel.app/css/recU7N42rhDKwKjVO-20240530T080345Z.css" rel="stylesheet">  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css&display=swap">
+  <link rel="stylesheet" href="https://gelatinartepaty.vercel.app/css/main.min.css?v=2.3.0">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- JS Implementing Plugins -->
+  <script src="https://gelatinartepaty.vercel.app/js/preline.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+  <!-- Open Graph (OG) -->
+  <meta property="og:title" content="Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX">
+  <meta property="og:description" content="Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.">
+  <meta property="og:image" content="URL_de_tu_imagen_principal">
+  <meta property="og:url" content="https://gelatinartepaty.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gelatinarte Pa´ty">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gelatinas Artísticas Personalizadas para fiestas y Eventos en CDMX">
+  <meta name="twitter:description" content="Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.">
+  <meta name="twitter:image" content="https://gelatinartepaty.vercel.app/img/ogimage.jpg">
+  <meta name="twitter:site" content="@GelatinasArteCDMX">
+  <meta name="twitter:creator" content="@luisangelmaciel">
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Gelatinas Artísticas Personalizadas Gelatinarte Pa´ty",
+    "description": "Descubre nuestras gelatinas artísticas personalizadas perfectas para bodas, eventos corporativos y fiestas infantiles en Ciudad de México. Calidad, creatividad y personalización en cada gelatina.",
+    "image": "https://gelatinartepaty.vercel.app/img/ogimage.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Cobre 239-No.",
+      "addressLocality": "Popular Rastro, Venustiano Carranza, Ciudad de México, CDMX",
+      "postalCode": "15220",
+      "addressRegion": "CDMX",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "19.4523887",
+      "longitude": "-99.1178247"
+    },
+    "openingHours": "Mo-Fr 09:00-18:00, Sa 10:00-16:00, Su 11:00-15:00",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+52 55 3951 4852",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://twitter.com/GelatinasArteCDMX"
+    ]
+  }
+  </script>
+
+  <!-- CSS for CTA Button -->
+  <style>
+    .cta-button {
+        background-color: #FF6F61;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        text-align: center;
+        display: inline-block;
+        margin: 20px 0;   
+        text-decoration: none;
+        font-weight: bold; 
+    }
+    .cta-button:hover {
+        background-color: #E55B50;
+    }
+  </style>
+  <style>
+    .label {	display: block;
+      margin-bottom: .25rem;
+    }
+    
+    label {
+      /*font-size: .85rem;*/
+      font-weight:bold;
+    }
+    
+    select[data-ss-uuid] {
+      display: none;
+      pointer-events: none; }
+    
+    .style-select {
+      display: block;
+      position: relative;
+      width: 140px; }
+      .style-select, .style-select * {
+        padding: 0;
+        margin: 0;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: left;
+        line-height: 19px;
+        color: black;
+        font-weight: 300;
+        cursor: pointer; }
+      .style-select .ss-selected-option {
+        width: 100%;
+        background-image: -webkit-linear-gradient(top, #fefefe, #f2f2f2);
+        background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+        border-radius: 2px;
+        padding: 6px;
+        border: 1px solid #d0d0d0; }
+        .style-select .ss-selected-option::after {
+          content: "â–¾";
+          position: absolute;
+          top: 6px;
+          right: 12px;
+          display: block; }
+      .style-select .ss-dropdown {
+        top: 32px;
+        left: 0;
+        position: absolute;
+        float: left;
+        width: 100%;
+        display: none;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border: 1px solid #d0d0d0;
+        border-top: 0 none; }
+        .style-select .ss-dropdown .ss-option {
+          width: 100%;
+          padding: 6px;
+          background-color: white; }
+          .style-select .ss-dropdown .ss-option.highlighted {
+            background-color: #f2f4f8; }
+          .style-select .ss-dropdown .ss-option.disabled {
+            color: #d0d0d0; }
+          .style-select .ss-dropdown .ss-option.ticked::before {
+            content: "âœ“";
+            padding-right: 3px; }
+      .style-select.open .ss-dropdown {
+        display: block; }
+      .style-select.open .ss-selected-option::after {
+        content: "â–´"; }
+    
+    .input{-webkit-appearance:none;-moz-appearance:none;appearance:none;box-sizing:border-box;width:100%;margin:0 0 .9rem;padding:.6rem;background:#fff;border:1px solid #bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);border-radius:0;outline:none;resize:vertical;transition:border-color .3s ease;color:#000;font-family:inherit;font-size:100%;line-height:1.15}.input[disabled]{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none;cursor:not-allowed;color:#0d0d0d}.input:focus{border-color:#17f}.input::-webkit-input-placeholder{color:#999;opacity:1}.input:-ms-input-placeholder{opacity:1}.input::-ms-input-placeholder{opacity:1}.input::placeholder{color:#999;opacity:1}.input:-ms-input-placeholder{color:#999}.input::-ms-input-placeholder{color:#999}.control{margin:0 0 .9rem;box-sizing:border-box}.control__input{position:absolute;opacity:0;pointer-events:none}.control__label{display:flex;align-items:center;position:relative;color:#000}.control__label:after,.control__label:before{content:"";display:block;width:20px;height:20px;border:1px solid transparent}.control__label:before{flex-shrink:0;margin-right:.6rem;border-color:#bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);background:#fff}.control__label:after{position:absolute;top:calc(48% - 10px);left:0;background-size:60%;background-repeat:no-repeat;background-position:50%;-webkit-transform:scale(0);transform:scale(0);transition:-webkit-transform .3s ease;transition:transform .3s ease;transition:transform .3s ease,-webkit-transform .3s ease}.control__input[type=radio]+.control__label:before{border-radius:100%}.control__input[type=radio]+.control__label:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M256 464c114.9 0 208-93.1 208-208S370.9 48 256 48 48 141.1 48 256s93.1 208 208 208z'/%3E%3C/svg%3E")}.control__input[type=checkbox]+.control__label:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M461.6 109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4-2.4 0-4.6 1-6.3 2.5L194.5 323s-78.5-75.5-80.7-77.7c-2.2-2.2-5.1-5.9-9.5-5.9s-6.4 3.1-8.7 5.4c-1.7 1.8-29.7 31.2-43.5 45.8-.8.9-1.3 1.4-2 2.1-1.2 1.7-2 3.6-2 5.7 0 2.2.8 4 2 5.7l2.8 2.6s139.3 133.8 141.6 136.1c2.3 2.3 5.1 5.2 9.2 5.2 4 0 7.3-4.3 9.2-6.2l249.1-320c1.2-1.7 2-3.6 2-5.8 0-2.5-1-4.6-2.4-6.4z'/%3E%3C/svg%3E")}.control__input[type=checkbox][disabled]+.control__label,.control__input[type=radio][disabled]+.control__label{cursor:not-allowed;color:#0d0d0d}.control__input[type=checkbox][disabled]+.control__label:before,.control__input[type=radio][disabled]+.control__label:before{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none}.control__input:focus+.control__label:before{border-color:#17f}.control__input:checked+.control__label:after{-webkit-transform:scale(1);transform:scale(1)}.select{-webkit-appearance:none;-moz-appearance:none;appearance:none;box-sizing:border-box;margin:0 0 .9rem;padding:.6rem calc(.9rem + 12px) .6rem .6rem;width:100%;background:#fff;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M256 298.3l174.2-167.2c4.3-4.2 11.4-4.1 15.8.2l30.6 29.9c4.4 4.3 4.5 11.3.2 15.5L264.1 380.9c-2.2 2.2-5.2 3.2-8.1 3-3 .1-5.9-.9-8.1-3L35.2 176.7c-4.3-4.2-4.2-11.2.2-15.5L66 131.3c4.4-4.3 11.5-4.4 15.8-.2L256 298.3z'/%3E%3C/svg%3E");background-size:12px;background-repeat:no-repeat;background-position:calc(100% - .6rem) 50%;border:1px solid #bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);border-radius:0;outline:0;color:#000;font-family:inherit;font-size:100%;line-height:1.15}.select[disabled]{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none;cursor:not-allowed;color:#0d0d0d}.select:focus{border-color:#17f}.select::-ms-expand{display:none}
+    
+    input[type="range"] {
+     width: 100%;
+    }
+    
+    input[type="color"] {
+     width: 100%;
+    }
+    
+    /* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento vertical */
+  height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #F97316, #FDBA74); /* Gradiente de naranja */
+  border-radius: 6px; /* Hacer la barra de desplazamiento circular */
+  border: 3px solid transparent; /* Espacio alrededor de la barra de desplazamiento */
+  background-clip: content-box; /* Mostrar el fondo del contenedor */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista */
+  border-radius: 6px; /* Hacer la pista circular */
+}
+
+/* Para navegadores que no son Webkit (Firefox) */
+body {
+  scrollbar-width: thin; /* Hacer la barra de desplazamiento más delgada */
+  scrollbar-color: #F97316 #f1f1f1; /* Color del pulgar y de la pista */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #F97316, #FDBA74); /* Gradiente de naranja */
+  border-radius: 6px; /* Hacer la barra de desplazamiento circular */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista */
+  border-radius: 6px; /* Hacer la pista circular */
+}
+    
+    </style>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://gelatinartepaty.vercel.app">
+
+  <!-- Category -->
+  <meta name="category" content="Food & Beverage, Desserts, Event Services">
+  
+</head>
+
+
 <body class="dark:bg-slate-900">
 <!-- ========== MAIN CONTENT ========== -->
 <main lindo-main-content id="content" role="main" class="font-default bg-base-50">

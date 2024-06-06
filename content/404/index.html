@@ -106,21 +106,24 @@
         .error404 {font-size:3em}
       }
     </style><script>
-    // Array de URLs de las imágenes
-    const images = [
-      'https://gelatinartepaty.vercel.app/img/404.jpg',
-      'https://gelatinartepaty.vercel.app/img/error.jpg',      
-      'https://gelatinartepaty.vercel.app/img/fatal.png'
-    ];
+    // Espera a que el DOM esté completamente cargado
+    window.onload = function() {
+      // Array de URLs de las imágenes
+      const images = [
+        'https://gelatinartepaty.vercel.app/img/404.jpg',
+        'https://gelatinartepaty.vercel.app/img/error.jpg',      
+        'https://gelatinartepaty.vercel.app/img/fatal.jpg'
+      ];
 
-    // Selecciona una imagen al azar
-    function getRandomImage() {
-      const randomIndex = Math.floor(Math.random() * images.length);
-      return images[randomIndex];
+      // Selecciona una imagen al azar
+      function getRandomImage() {
+        const randomIndex = Math.floor(Math.random() * images.length);
+        return images[randomIndex];
+      }
+
+      // Asigna la imagen aleatoria al elemento img
+      document.getElementById('randomImage').src = getRandomImage();
     }
-
-    // Asigna la imagen aleatoria al elemento img
-    document.getElementById('randomImage').src = getRandomImage();
   </script>
     <!-- ========== FOOTER ========== -->
     <footer class="mt-auto text-center py-5">
