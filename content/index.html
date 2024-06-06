@@ -176,7 +176,39 @@
      width: 100%;
     }
     
-    
+    /* Personalización de la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento vertical */
+  height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #F97316, #FDBA74); /* Gradiente de naranja */
+  border-radius: 6px; /* Hacer la barra de desplazamiento circular */
+  border: 3px solid transparent; /* Espacio alrededor de la barra de desplazamiento */
+  background-clip: content-box; /* Mostrar el fondo del contenedor */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista */
+  border-radius: 6px; /* Hacer la pista circular */
+}
+
+/* Para navegadores que no son Webkit (Firefox) */
+body {
+  scrollbar-width: thin; /* Hacer la barra de desplazamiento más delgada */
+  scrollbar-color: #F97316 #f1f1f1; /* Color del pulgar y de la pista */
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #F97316, #FDBA74); /* Gradiente de naranja */
+  border-radius: 6px; /* Hacer la barra de desplazamiento circular */
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color de fondo de la pista */
+  border-radius: 6px; /* Hacer la pista circular */
+}
     
     </style>
 
@@ -545,7 +577,7 @@
       extend: {
         colors: {
           'orange-500': '#F97316',
-          'orange-300': '#FDBA74',
+          'orange-300': '#E55B50;',
         }
       }
     }
@@ -1081,7 +1113,7 @@
   </div></footer>   
 
   </main>
-
+ 
   <!-- ========== END MAIN CONTENT ========== -->
 
 
