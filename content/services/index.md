@@ -301,7 +301,7 @@ pb-2">
 </div>
 <div class="col-span-1 flex flex-col gap-y-3">
 <h2 class="font-bold text-base-900 text-4xl"><span lindo-text="_block_vdct7555_text_1" class="inline-block">Gelatinas Artísticas Personalizadas</span></h2>
-<div class="text-lg text-base-800"><span lindo-text="_block_vdct7555_text_2" class="inline-block">En Gelatinas Yolanda creamos gelatinas personalizadas utilizando técnicas avanzadas para lograr diseños únicos y detallados, ideales para sorprender en cualquier celebración</span></div>
+<div class="text-lg text-base-800"><span lindo-text="_block_vdct7555_text_2" class="inline-block">En Gelatinas Artisticas Paty creamos gelatinas personalizadas utilizando técnicas avanzadas para lograr diseños únicos y detallados, ideales para sorprender en cualquier celebración</span></div>
 <div class="pt-2">
   <a class="inline-flex justify-center items-center gap-x-3 text-center bg-primary-500 hover:opacity-90 text-white text-sm font-medium transition-all rounded-full focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 focus:ring-offset-base-50 py-4 px-10 dark:focus:ring-offset-base-800" lindo-btn-href="_block_vdct7555_btn_href_1" href="Contact" lindo-btn="_block_vdct7555_btn_text_1"><span lindo-btn-text="" class="">Solicita una cotización</span></a>
 </div> 
