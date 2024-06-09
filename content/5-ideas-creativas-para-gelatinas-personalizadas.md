@@ -1,7 +1,7 @@
 ---
 title: "5 Ideas Creativas para Gelatinas Personalizadas"
 description: "Descubre cómo crear gelatinas personalizadas que deslumbrarán en cualquier ocasión. ¡Sorprende a todos con estas delicias únicas y creativas! 🍮✨ #gelatinaspersonalizadas #postresoriginales"
-date: 2024-05-06
+date: 2024-04-06
 tags: 
 - Gelatinas artesanales
 - Creativas
