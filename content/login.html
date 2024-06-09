@@ -1,27 +1,28 @@
-
 <!DOCTYPE html>
-<html lang="es" class="h-full">
+<html lang="es-MX" class="h-full">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <link rel="canonical" href="https://preline.co/">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Sign in example using Tailwind CSS for Preline UI, a product of Htmlstream.">
+ <!-- Required Meta Tags Always Come First -->
+ <meta charset="utf-8">
+ <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+ <link rel="canonical" href="https://vercelapp-go.vercel.app/">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ <meta name="description" content="Panel de usuario: Entregables de cada sección y detalles de la investigación de contenido.">
 
-  <meta name="twitter:site" content="@preline">
-  <meta name="twitter:creator" content="@preline">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Sign in using Tailwind CSS | Preline UI, crafted with Tailwind CSS">
-  <meta name="twitter:description" content="Sign in example using Tailwind CSS for Preline UI, a product of Htmlstream.">
-  <meta name="twitter:image" content="https://preline.co/assets/img/og-image.png">
+ <meta name="twitter:site" content="@luisangelmaciel">
+ <meta name="twitter:creator" content="@luisangelmaciel">
+ <meta name="twitter:card" content="summary_large_image">
+ <meta name="twitter:title" content="Panel de usuario: Entregables de cada sección y detalles de la investigación de contenido.">
+ <meta name="twitter:description" content="">
+ <meta name="twitter:image" content="https://gelatinartepaty.vercel.app/img/ogimage.jpg">
 
-  <meta property="og:url" content="https://preline.co/">
-  <meta property="og:locale" content="es_MX">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Preline">
-  <meta property="og:title" content="Sign in using Tailwind CSS | Preline UI, crafted with Tailwind CSS">
-  <meta property="og:description" content="Sign in example using Tailwind CSS for Preline UI, a product of Htmlstream.">
-  <meta property="og:image" content="https://preline.co/assets/img/og-image.png">
+ <meta property="og:url" content="https://vercelapp-go.vercel.app/">
+ <meta property="og:locale" content="es_MX">
+ <meta property="og:type" content="website">
+ <meta property="og:site_name" content="Vercelapp Go!">
+ <meta property="og:title" content="Panel de usuario: Entregables de cada sección y detalles de la investigación de contenido.">
+ <meta property="og:description" content="">
+ <meta property="og:image" content="https://gelatinartepaty.vercel.app/img/ogimage.jpg">
 
   <!-- Title -->
   <title>Panel de usuario</title>
@@ -360,7 +361,7 @@ input[type="color"] {
                   <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Iniciar sesión</h1>
                   <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
                     Aún no tienes una cuenta. 
-                    <a class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="https://vercelapp-go.vercel.app/">
+                    <a class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="https://vercelapp-go.vercel.app/"´target="new">
                       Registrate aquí.
                     </a>
                   </p>
@@ -582,11 +583,10 @@ document.addEventListener('DOMContentLoaded', function() {
                       <div>
                         <div class="flex justify-between items-center">
                           <label for="password" class="block text-sm mb-2 dark:text-white">Password</label>
-                          <span class="text-sm text-blue-600 decoration-2 hover:underline font-medium"  id="abrir-modal">
-                            <button type="button" id="abrir-modal"">
+                          <span class="text-sm text-blue-600 decoration-2 hover:underline font-medium">
+                            <button type="button" data-hs-overlay="#hs-modal-recover-account">
                             ¿Olvidaste la contraseña?
-                          </button></span>                                                      
-                          
+                          </button></span>                                                   
                         </div>
                         <div class="relative">                       
                           <input type="password" id="password" required name="password" placeholder="Password"
@@ -599,8 +599,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <p class="hidden text-xs text-red-600 mt-2" id="password-error">8 caracteres o más</p>
                       </div>
-                      <!-- End Form Group -->
-         <br>
+                      <!-- End Form Group -->        <br>
                       <!-- Checkbox -->
                       <div class="flex items-center">
                         <div class="flex">
@@ -643,56 +642,102 @@ document.addEventListener('DOMContentLoaded', function() {
           </main>
           <script src="https://preline.co/assets/vendor/preline/dist/index.js?v=2.3.0"></script>
         </div>
-           
-      
-<div id="modal" class="modal">
-  <div class="modal-contenido">
-    <span class="modal-cerrar">&times;</span>  
-    <div>
-      <div>
-        <div class=" rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-800">
-          <div class="p-4 sm:p-7">
-            <div class="text-center">
-              <h2 class="block text-2xl font-bold text-gray-800 dark:text-neutral-200">¿Contraseña olvidada?</h2>
-              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
-                ¿Ha recordado su contraseña?
-                <span class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500 modal-cerrar-1 " >
-                  Inicie sesión
-                </span>
-              </p>
-            </div>
-            <div class="mt-5">
-              <!-- Form -->
-              <form>
-                <div class="grid gap-y-4">
-                  <!-- Form Group -->
-                  <div>
-                    <label for="email" class="block text-sm mb-2 dark:text-white">Email </label>
-                    <div class="relative">
-                      <input type="email" id="email" name="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required aria-describedby="email-error">
-                      <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                        <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <p class="hidden text-xs text-red-600 mt-2" id="email-error">Porfavor, incluya un email para contactarnos lo más pronto posible.</p>
-                  </div>
-                  <!-- End Form Group -->
-                  <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                    Recuperar password</button>
+         
+          </style>
+        <div id="hs-modal-recover-account" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto ">
+          <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-800">
+              <div class="absolute top-2 end-2" data-hs-overlay="#hs-modal-recover-account">
+                <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg 
+                border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none 
+                dark:text-white dark:border-transparent dark:hover:bg-neutral-700 " >
+                  <span class="sr-only">Close</span>
+                  <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" 
+                  height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                  stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              </div>
+               <div class="p-4 sm:p-7">
+                <div class="text-center">
+                  <h2 class="block text-2xl font-bold text-gray-800 dark:text-neutral-200">¿Contraseña olvidada?</h2>
+                  <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                    ¿Ha recordado su contraseña? 
+                    <span class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500 " data-hs-overlay="#hs-modal-recover-account" >
+                      Inicie sesión
+                    </span>
+                  </p>
                 </div>
-              </form>
-              <!-- End Form -->
+        
+                <div class="mt-5">
+                  <!-- Form -->
+                  <form>
+                    <div class="grid gap-y-4">
+                      <!-- Form Group -->
+                      <div>
+                        <label for="email" class="block text-sm mb-2 dark:text-white">Email</label>
+                        <div class="relative">
+                          <input type="email" id="email" name="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required aria-describedby="email-error">
+                          <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                            <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                            </svg>
+                          </div>
+                        </div>
+                        <p class="hidden text-xs text-red-600 mt-2" id="email-error">Porfavor incluya un email valido para ponerse en contacto</p>
+                      </div>
+                      <!-- End Form Group -->
+        
+                      <button type="submit" class="w-full py-3 px-4 inline-flex justify-center 
+                      items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
+                       bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" 
+                       data-hs-overlay="#hs-task-created-alert">Reestabler contraseña</button>
+                    </div>
+                  </form>
+                  <!-- End Form -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</div>
 
-
+ 
+        <div id="hs-task-created-alert" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto">
+          <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-lg sm:w-full m-3 sm:mx-auto">
+            <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+              <div class="absolute top-2 end-2">
+                <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg 
+                border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none 
+                dark:text-white dark:border-transparent dark:hover:bg-neutral-700" data-hs-overlay="#hs-task-created-alert">
+                  <span class="sr-only">Close</span>
+                  <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                </button>
+              </div>
+        
+              <div class="p-4 sm:p-10 text-center overflow-y-auto">                <!-- Icon -->
+                <span class="mb-4 inline-flex justify-center items-center size-[46px] rounded-full border-4 border-green-50 bg-green-100 text-green-500 dark:bg-green-700 dark:border-green-600 dark:text-green-100">
+                  <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                  </svg>
+                </span>
+                <!-- End Icon -->
+        
+                <h3 class="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
+                  Listo
+                </h3>
+                <p class="text-gray-500 dark:text-neutral-500">
+                 En los próximos 10 minutos recibira un correo electronico para reestablecer su contraseña-
+                </p>
+        
+                <div class="mt-6 flex justify-center gap-x-4">
+                  <button type="button" 
+                  class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-white dark:hover:bg-neutral-800" data-hs-overlay="#hs-task-created-alert">
+                    Gracias
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       
       
 </div>
@@ -1239,15 +1284,22 @@ document.addEventListener('DOMContentLoaded', function() {
             </span></a>
           </li>
 
-          <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
-           
-            
-          </a>
+        
           
-            <button id="logout"> <li><a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300" href="#CerrarSesion">
+            <button> <li><a class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300" href="#CerrarSesion">
               <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path d="M9 12h12l-3 -3" /><path d="M18 15l3 -3" /></svg>
               Cerrar sesión
             </a></li></button>
+      
+            <div class="text-center">
+              <button type="button" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-sign-out-alert-small-window">
+                Open modal
+              </button>
+            </div>
+            
+
+            
+           
       </ul>
     </nav>
   </div>
@@ -1259,9 +1311,7 @@ document.addEventListener('DOMContentLoaded', function() {
         padding: 0;
         box-sizing: border-box;
       }
-      
-  
-  
+        
       .modalFull {
         position: fixed;
         top: 0;
@@ -1311,13 +1361,11 @@ document.addEventListener('DOMContentLoaded', function() {
         height: 100%;
         width: 100%;
       }
-    </style>
-  
+    </style>  
      <div id="myModalFull" class="modalFull">
       <span class="closeModalFull">&times;</span>
       <iframe id="modalContent" src="" name="iframe_a" frameborder="0" style="border:0;"></iframe>
-    </div>
-  
+    </div>  
   
     <script>
       // Get the modal
@@ -1355,6 +1403,45 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     </script>
   </div>
+<div id="hs-sign-out-alert-small-window" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto">
+              <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xs sm:w-full m-3 sm:mx-auto">
+                <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+                  <div class="absolute top-2 end-2">
+                    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700" data-hs-overlay="#hs-sign-out-alert-small-window">
+                      <span class="sr-only">Close</span>
+                      <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+                    </button>
+                  </div>
+            
+                  <div class="p-4 sm:p-10 text-center overflow-y-auto">
+                    <!-- Icon -->
+                    <span class="mb-4 inline-flex justify-center items-center size-[62px] rounded-full border-4 border-yellow-50 bg-yellow-100 text-yellow-500 dark:bg-yellow-700 dark:border-yellow-600 dark:text-yellow-100">
+                      <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                      </svg>
+                    </span>
+                    <!-- End Icon -->
+            
+                    <h3 class="mb-2 text-2xl font-bold text-gray-800 dark:text-neutral-200">
+                      Cerrar sesión
+                    </h3>
+                    <p class="text-gray-500 dark:text-neutral-500">
+                      ¿Estas segiro de cerrar sesión en tu cuenta de página?
+                    </p>
+            
+                    <div class="mt-6 grid gap-y-2">
+                      <span class="py-2.5 px-4 w-full inline-flex justify-center items-center gap-2 rounded-lg border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-neutral-800 dark:hover:bg-neutral-800 dark:border-neutral-800 dark:text-neutral-400 dark:hover:text-white dark:focus:ring-offset-gray-800"   id="logout">
+                        Cerrar sesión
+                      </span>
+                      <button type="button" class="py-2.5 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-sign-out-alert-small-window">
+                        Cancelar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
   <!-- Content -->
   <div class="w-full lg:ps-64"  style="overflow-y:hidden">
   
@@ -1501,6 +1588,70 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                     </td>
                   </tr>
+
+
+
+
+
+
+                  <!-- inicio -->
+                  
+                  <tr>
+                    <td class="size-px whitespace-nowrap">
+                      <div class="ps-6 py-3">
+                        <label for="hs-at-with-checkboxes-1" class="flex">
+                          <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
+                          <span class="sr-only">Checkbox</span>
+                        </label>
+                      </div>
+                    </td>
+                    <td class="size-px whitespace-nowrap">
+                      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+                        <div class="flex items-center gap-x-3">
+                          <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
+                          <div class="grow">
+                            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">FAQ</span>
+                            <span class="block text-sm text-gray-500 dark:text-neutral-500">https://gelatinartepaty.vercel.app/#FAQ</span>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                  
+                    <td class="size-px whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+                          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                          </svg>
+                          Active
+                        </span>
+                      </div>
+                    </td>
+                    <td class="size-px whitespace-nowrap" hidden>
+                      <div class="px-6 py-3">
+                        <div class="flex items-center gap-x-3">
+                          <span class="text-xs text-gray-500 dark:text-neutral-500">1/5</span>
+                          <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700">
+                            <div class="flex flex-col justify-center overflow-hidden bg-gray-800 dark:bg-neutral-200" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="size-px whitespace-nowrap">
+                      <div class="px-6 py-3">
+                        <span class="text-sm text-gray-500 dark:text-neutral-500">26 mayo, 2024</span>
+                      </div>
+                    </td>
+                    <td class="size-px whitespace-nowrap" FIN>
+                      <div class="px-6 py-1.5">
+                        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="#">
+                          Edit
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+
+
 
                   <tr>
                     <td class="size-px whitespace-nowrap">
@@ -2137,7 +2288,131 @@ Estado del sitio al 100%
     </td>
   </tr>
 
-<!-- -->                                
+<!-- -->  <!-- -->
+
+  <tr>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 py-3">
+        <label for="hs-at-with-checkboxes-1" class="flex">
+          <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
+          <span class="sr-only">Checkbox</span>
+        </label>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
+          <div class="grow">
+            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">SEO</span>
+            <a href="#Lighthouse"  
+            data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" 
+            class="block text-sm text-gray-500 dark:text-neutral-500" 
+            data-src="https://gelatinartepaty.vercel.app/factura">           
+2 tarjetas validas 
+ </a>           
+          </div>
+        </div>
+      </div>
+    </td>
+  
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+          </svg>
+          Active
+        </span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap" hidden>
+      <div class="px-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <span class="text-xs text-gray-500 dark:text-neutral-500">1/5</span>
+          <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-gray-800 dark:bg-neutral-200" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="text-sm text-gray-500 dark:text-neutral-500">7 junio, 2024</span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-1.5">
+        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="#">
+          Edit
+        </a>
+      </div>
+    </td>
+  </tr>
+
+<!-- -->        <!-- -->
+
+  <tr>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 py-3">
+        <label for="hs-at-with-checkboxes-1" class="flex">
+          <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
+          <span class="sr-only">Checkbox</span>
+        </label>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
+          <div class="grow">
+            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">Galería</span>
+            <a href="#Lighthouse"  
+            data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" 
+            class="block text-sm text-gray-500 dark:text-neutral-500" >           
+Optimización de imagenes: conversión, compresión y reajuste de tamaño
+ </a>
+           
+          </div>
+        </div>
+      </div>
+    </td>
+  
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+          </svg>
+          Active
+        </span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap" hidden>
+      <div class="px-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <span class="text-xs text-gray-500 dark:text-neutral-500">1/5</span>
+          <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-gray-800 dark:bg-neutral-200" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="text-sm text-gray-500 dark:text-neutral-500">8 junio, 2024</span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-1.5">
+        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="#">
+          Edit
+        </a>
+      </div>
+    </td>
+  </tr>
+  
+<!-- -->                           
                 </tbody>
               </table>
               <!-- End Table -->
@@ -2616,6 +2891,8 @@ document.querySelector('.modal-cerrar').addEventListener('click', function() {
 document.querySelector('.modal-cerrar-1').addEventListener('click', function() {
   document.getElementById('modal').style.display = 'none';
 });
+
+
 </script>
 
 
