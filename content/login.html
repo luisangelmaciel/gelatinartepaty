@@ -311,6 +311,40 @@ input[type="color"] {
   
 }
 </style>
+<style>.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-contenido {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  box-sizing: border-box;
+}
+
+.modal-cerrar {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.modal-cerrar-1 {
+  font-weight: bold;
+}
+</style>
 </head>
 
 
@@ -548,7 +582,11 @@ document.addEventListener('DOMContentLoaded', function() {
                       <div>
                         <div class="flex justify-between items-center">
                           <label for="password" class="block text-sm mb-2 dark:text-white">Password</label>
-                          <a class="text-sm text-blue-600 decoration-2 hover:underline font-medium" href="#olvidaste">¿Olvidaste la contraseña?</a>
+                          <span class="text-sm text-blue-600 decoration-2 hover:underline font-medium"  id="abrir-modal">
+                            <button type="button" id="abrir-modal"">
+                            ¿Olvidaste la contraseña?
+                          </button></span>                                                      
+                          
                         </div>
                         <div class="relative">                       
                           <input type="password" id="password" required name="password" placeholder="Password"
@@ -579,9 +617,9 @@ document.addEventListener('DOMContentLoaded', function() {
                       <!-- End Checkbox -->
        <br>
 
-                      <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                        Iniciar sesión
-                              <input id="js-comm_btn" type="submit" class="ag-comm_btn" value="Enviar" disabled />
+                      <button type="submit" 
+                      id="js-comm_btn"class="ag-comm_btn w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                        Iniciar sesión                              
                               </button> 
                         <p id="error" style="color: red; display: none;">Contraseña incorrecta</p>
                         <span id="wait-message" class="wait"  style="display: none;">Espere un momento, por favor...</span>
@@ -607,9 +645,57 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
            
       
-      
-      
+<div id="modal" class="modal">
+  <div class="modal-contenido">
+    <span class="modal-cerrar">&times;</span>  
+    <div>
+      <div>
+        <div class=" rounded-xl shadow-sm dark:bg-neutral-900 dark:border-neutral-800">
+          <div class="p-4 sm:p-7">
+            <div class="text-center">
+              <h2 class="block text-2xl font-bold text-gray-800 dark:text-neutral-200">¿Contraseña olvidada?</h2>
+              <p class="mt-2 text-sm text-gray-600 dark:text-neutral-400">
+                ¿Ha recordado su contraseña?
+                <span class="text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500 modal-cerrar-1 " >
+                  Inicie sesión
+                </span>
+              </p>
+            </div>
+            <div class="mt-5">
+              <!-- Form -->
+              <form>
+                <div class="grid gap-y-4">
+                  <!-- Form Group -->
+                  <div>
+                    <label for="email" class="block text-sm mb-2 dark:text-white">Email </label>
+                    <div class="relative">
+                      <input type="email" id="email" name="email" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required aria-describedby="email-error">
+                      <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                        <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                          <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"/>
+                        </svg>
+                      </div>
+                    </div>
+                    <p class="hidden text-xs text-red-600 mt-2" id="email-error">Porfavor, incluya un email para contactarnos lo más pronto posible.</p>
+                  </div>
+                  <!-- End Form Group -->
+                  <button type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                    Recuperar password</button>
+                </div>
+              </form>
+              <!-- End Form -->
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+      
+      
+</div>
  
 <div class="bg-gray-50 dark:bg-neutral-900" id="content">
 
@@ -618,7 +704,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <nav class="flex basis-full items-center w-full mx-auto px-4 sm:px-6" aria-label="Global">
       <div class="me-5 lg:me-0 lg:hidden">
         <!-- Logo -->
-        <span data-hs-overlay="#application-sidebar" aria-controls="application-sidebar" aria-label="Sidebar" class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" aria-label="Preline">
+        <span data-hs-overlay="#application-sidebar" aria-controls="application-sidebar" aria-label="Sidebar" class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80 text-gray-800 dark:text-neutral-200" 
+        aria-label="Preline">
           vercelapp.Go
         </span>
         <!-- End Logo -->
@@ -660,8 +747,33 @@ document.addEventListener('DOMContentLoaded', function() {
             </svg>
           </button>
 
+
+
+          <button type="button" class="hs-dark-mode hs-dark-mode-active:hidden block text-gray-800 dark:text-neutral-200 " data-hs-theme-click-value="dark">
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+            </svg>
+           
+          </button>
+          <button type="button" class="hs-dark-mode hs-dark-mode-active:inline-flex hidden text-gray-800 dark:text-neutral-200 " data-hs-theme-click-value="light">
+            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+    
+          </button>
+
+
+
           <div class="hs-dropdown [--placement:bottom-right] relative inline-flex">
-            <button id="hs-dropdown-with-header" type="button" class="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700">
+            <button id="hs-dropdown-with-header" type="button" class="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700 text-gray-800 dark:text-neutral-200">
               <img class="inline-block size-[38px] rounded-full ring-2 ring-white dark:ring-neutral-800" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
             </button>
             
@@ -845,9 +957,9 @@ document.addEventListener('DOMContentLoaded', function() {
    ">
     <div class="px-8 pt-4">
       <!-- Logo -->
-      <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80" href="#" aria-label="Preline">
-        <small class="" style="color:black">
-          <img class="inline-block h-10 h-logo" src="https://gelatinartepaty.vercel.app/img/favicon.png" lindo-image-logo="full" lindo-img-size="600x200" alt="GelatinArte Pa´ty"><span class="font-semibold"> G</span>elatin<span class="font-semibold">arte</span> <span class="font-semibold">Pa´ty</span> 
+      <a class="flex-none rounded-xl text-xl inline-block font-semibold focus:outline-none focus:opacity-80 text-gray-800 dark:text-neutral-200" href="#" aria-label="Preline">
+        <small class="text-gray-800 dark:text-neutral-200 " style="color:black">
+          <img class="inline-block h-10 h-logo text-gray-800 dark:text-neutral-200" src="https://gelatinartepaty.vercel.app/img/favicon.png" lindo-image-logo="full" lindo-img-size="600x200" alt="GelatinArte Pa´ty"><span class="font-semibold text-gray-800 dark:text-neutral-200"> G</span><span class="font-semibold text-gray-800 dark:text-neutral-200">elatin</span><span class="font-semibold text-gray-800 dark:text-neutral-200">arte</span> <span class="font-semibold text-gray-800 dark:text-neutral-200">Pa´ty</span> 
         </smal>
       </a>
       <!-- End Logo -->
@@ -1031,11 +1143,9 @@ document.addEventListener('DOMContentLoaded', function() {
             Documentación
           </a></li>
 
-          <li><a href=#NotaDePago" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
-            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
-              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
-            </svg>
+          <li><a href=#NotaDePago" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">            
+            <svg   xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-invoice flex-shrink-0 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M19 12v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-14a2 2 0 0 1 2 -2h7l5 5v4.25" /></svg>
             Nota de pago
           </a></li>
           <li><a href="#ServiciosContratados" data-src="https://gelatinartepaty.vercel.app/servicios-contratados" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
@@ -1046,16 +1156,88 @@ document.addEventListener('DOMContentLoaded', function() {
             </svg>
             Servicios contratados
           </a></li>
-           <li><a href="#Estado del sitio"  data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
-            <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-              <path d="M3 6h18" />
-              <path d="M16 10a4 4 0 0 1-8 0" />
-            </svg>
-           Estado del sitio
-          </a></li>
           
+          <li><a href="#Estado del sitio"  data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
+         
+            <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" 
+            stroke-linecap="round" stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user flex-shrink-0 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
 
+            <div class="visitCounterLocalStorage">
+              <span id="result"></span>
+              
+              <script>
+                 function isLocalStorageSupported(){
+                if (typeof Storage !== "undefined")
+                  //local storage is supported
+                  return true;
+                else{
+                  //local storage is not supported
+                  return false;
+                }
+              }
+              
+              function doesVariableExist(x){
+                if (localStorage[x]) {
+                  return true;
+                }else{
+                  return false;
+                }
+              }
+              
+              function createStorageVariable(x, value){
+                localStorage[x] = value
+                return localStorage[x]
+              }
+              
+              if (isLocalStorageSupported){
+                if(doesVariableExist('test')){
+                  localStorage.test = Number(localStorage.test) + 1
+                }else{
+                  localStorage.test = 1
+                }
+                console.log(localStorage.test)
+              }
+              // localStorage.clear()
+              if (typeof Storage !== "undefined") {
+                //Local storage is supported
+                if (localStorage.visitcount) {
+                  // variable exists for this site they've been here before so do things
+                  document.getElementById("result").innerHTML =
+                    "Logged in " +
+                    localStorage.visitcount +
+                    " ";
+                  localStorage.visitcount = Number(localStorage.visitcount) + 1; //update variable for existing users
+                } else {
+                  // variable not found they haven't been here before
+                  localStorage.visitcount = 1; //set initial value of variable for this site and then do things for first time
+                  document.getElementById("result").innerHTML =
+                    "Bienvenida.";
+                }
+              } else {
+                // their browser doesn't support local storage so let them know or just do nothing
+                alert(
+                  "Lo sentimos, su navegador no es compatible con el almacenamiento web. Los cambios no se guardarán"
+                );
+                document.getElementById("result").innerHTML =
+                  "Lo sentimos, su navegador no es compatible con el almacenamiento web...";
+              }
+              
+              // console.log("localstorage visit count now: " + localStorage.visitcount);
+              
+              // localStorage.clear();
+              </script>
+              </div>
+          </a></li>
+          <li><a href="#Estado del sitio"  data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
+                     
+          
+            <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+              <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+              </svg>
+              Estado del sitio
+            </span></a>
+          </li>
 
           <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
            
@@ -1731,12 +1913,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="flex items-center gap-x-3">
                           <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
                           <div class="grow">
-                            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">Lighthouse</span>
+                            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">Page 404</span>
                             <a href="#Lighthouse"  
                             data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" 
                             class="block text-sm text-gray-500 dark:text-neutral-500" 
                             data-src="https://gelatinartepaty.vercel.app/factura">           
-           Estado del sitio al 100%          </a>
+           Estado del sitio al 100%   
+                 </a>
                            
                           </div>
                         </div>
@@ -1802,11 +1985,11 @@ document.addEventListener('DOMContentLoaded', function() {
                   
                     <td class="size-px whitespace-nowrap">
                       <div class="px-6 py-3">
-                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
+                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
                           <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                           </svg>
-                          Warning
+                          Active
                         </span>
                       </div>
                     </td>
@@ -1860,11 +2043,11 @@ document.addEventListener('DOMContentLoaded', function() {
                    
                     <td class="size-px whitespace-nowrap">
                       <div class="px-6 py-3">
-                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-red-100 text-red-800 rounded-full dark:bg-red-500/10 dark:text-red-500">
+                        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
                           <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
                           </svg>
-                          Danger
+                          Active
                         </span>
                       </div>
                     </td>
@@ -1891,7 +2074,70 @@ document.addEventListener('DOMContentLoaded', function() {
                       </div>
                     </td>
                   </tr>
-                                                         
+                         <!-- -->
+
+  <tr>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 py-3">
+        <label for="hs-at-with-checkboxes-1" class="flex">
+          <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
+          <span class="sr-only">Checkbox</span>
+        </label>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="ps-6 lg:ps-3 xl:ps-0 pe-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
+          <div class="grow">
+            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">Lighthouse</span>
+            <a href="#Lighthouse"  
+            data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" 
+            class="block text-sm text-gray-500 dark:text-neutral-500" 
+            data-src="https://gelatinartepaty.vercel.app/factura">           
+Estado del sitio al 100%   
+ </a>
+           
+          </div>
+        </div>
+      </div>
+    </td>
+  
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-teal-100 text-teal-800 rounded-full dark:bg-teal-500/10 dark:text-teal-500">
+          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+          </svg>
+          Active
+        </span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap" hidden>
+      <div class="px-6 py-3">
+        <div class="flex items-center gap-x-3">
+          <span class="text-xs text-gray-500 dark:text-neutral-500">1/5</span>
+          <div class="flex w-full h-1.5 bg-gray-200 rounded-full overflow-hidden dark:bg-neutral-700">
+            <div class="flex flex-col justify-center overflow-hidden bg-gray-800 dark:bg-neutral-200" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-3">
+        <span class="text-sm text-gray-500 dark:text-neutral-500">6 junio, 2024</span>
+      </div>
+    </td>
+    <td class="size-px whitespace-nowrap">
+      <div class="px-6 py-1.5">
+        <a class="inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="#">
+          Edit
+        </a>
+      </div>
+    </td>
+  </tr>
+
+<!-- -->                                
                 </tbody>
               </table>
               <!-- End Table -->
@@ -2170,17 +2416,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'category',
             tickPlacement: 'on',
             categories: [
-              '25 January 2023',
-              '26 January 2023',
-              '27 January 2023',
-              '28 January 2023',
-              '29 January 2023',
-              '30 January 2023',
-              '31 January 2023',
-              '1 February 2023',
-              '2 February 2023',
-              '3 February 2023',
-              '4 February 2023',
+              '25 January 2023',             
               '5 February 2023'
             ],
             axisBorder: {
@@ -2311,8 +2547,25 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       })();
     });
-  </script>
-  
+  </script> <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
+                          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                          </svg>
+                          Warning
+                        </span>
+  <!--  <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
+                          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                          </svg>
+                          Warning
+                        </span>
+                         <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-red-100 text-red-800 rounded-full dark:bg-red-500/10 dark:text-red-500">
+                          <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                          </svg>
+                          Danger
+                        </span>
+                         -->
  <script>
   const correctPassword = "burbuja"; // Cambia esto por la contraseña real
   document.addEventListener("DOMContentLoaded", () => {
@@ -2350,6 +2603,23 @@ document.addEventListener('DOMContentLoaded', function() {
    }
   });
  </script>
+
+
+<script>document.getElementById('abrir-modal').addEventListener('click', function() {
+  document.getElementById('modal').style.display = 'block';
+});
+
+document.querySelector('.modal-cerrar').addEventListener('click', function() {
+  document.getElementById('modal').style.display = 'none';
+});
+
+document.querySelector('.modal-cerrar-1').addEventListener('click', function() {
+  document.getElementById('modal').style.display = 'none';
+});
+</script>
+
+
+
 
 </div>
 </div>
