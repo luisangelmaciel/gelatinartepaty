@@ -1,5 +1,10 @@
-Plan de negocios para  una empresa de comercialización de productos de limpieza al granel. 
-
+---
+title: Plan de negocios para  una empresa de comercialización de productos de limpieza al granel.
+permalink: plan-de-negocios-burbulimpia.html
+---
+ 
+ <meta name="robots" content="noindex, nofollow">
+ <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 ### Servicios de Limpieza que se Ofrecen
 - **Limpieza Profesional**: Incluye servicios de limpieza para oficinas, hogares y espacios comerciales¹.
 - **Sanitización y Desinfección**: Servicios especializados para mantener los espacios libres de virus y bacterias¹.

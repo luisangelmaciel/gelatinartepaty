@@ -1,10 +1,12 @@
+
+
 <!DOCTYPE html>
 <html lang="es-MX" class="h-full">
 
 <head>
  <!-- Required Meta Tags Always Come First -->
  <meta charset="utf-8">
- <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+ <meta name="robots" content="noindex, nofollow">
  <link rel="canonical" href="https://vercelapp-go.vercel.app/">
  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
  <meta name="description" content="Panel de usuario: Entregables de cada sección y detalles de la investigación de contenido.">
@@ -28,8 +30,8 @@
   <title>Panel de usuario</title>
 
   <!-- Favicon -->
-  <link rel="shortcut icon" href="https://preline.co/favicon.ico">
-
+  <link rel="shortcut icon" href="https://gelatinartepaty.vercel.app/img/favicon.png">
+  
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
@@ -1139,7 +1141,7 @@ document.addEventListener('DOMContentLoaded', function() {
               <rect width="20" height="14" x="2" y="7" rx="2" ry="2" />
               <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
             </svg>
-            Projectos
+            Proyectos
 
             <svg class="hs-accordion-active:block ms-auto hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="m18 15-6-6-6 6" />
@@ -1153,9 +1155,21 @@ document.addEventListener('DOMContentLoaded', function() {
           <div id="projects-accordion-child" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
             <ul class="pt-2 ps-2">
               <li>
-                <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300  modalLink" 
-                 data-src="https://gelatinartepaty.vercel.app/" href="#Limpiaburbuja">
+                <a class="modalLink flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300  modalLink" 
+                 data-src="https://gelatinartepaty.vercel.app/" href="#Limpiaburbuja" data-src="https://gelatinartepaty.vercel.app/plan-de-negocios-burbulimpia.html">
                   Limpiaburbuja
+                </a>
+              </li>
+              <li>
+                <a class="modalLink flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300  modalLink" 
+                 data-src="https://gelatinartepaty.vercel.app/" href="#Limpiaburbuja" data-src="https://gelatinartepaty.vercel.app/etiquetas-1.pdf">
+                  Etiquetas 1
+                </a>
+              </li>
+              <li>
+                <a class="modalLink flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-300  modalLink" 
+                 data-src="https://gelatinartepaty.vercel.app/" href="#Limpiaburbuja" data-src="https://gelatinartepaty.vercel.app/etiquetas-2.pdf">
+                  Etiquetas 2
                 </a>
               </li>
               <li>
@@ -1303,9 +1317,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 <path d="M3 6h18" />
                 <path d="M16 10a4 4 0 0 1-8 0" />
               </svg>
-              Notificaciones
+              Configuración
             </button></li>
-
+   
+            <li><button type="button"  data-hs-overlay="#hs-sign-out-alert-small-window" class=" w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300" >
+                            
+              <svg  class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-user-cog"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h2.5" /><path d="M19.001 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M19.001 15.5v1.5" /><path d="M19.001 21v1.5" /><path d="M22.032 17.25l-1.299 .75" /><path d="M17.27 20l-1.3 .75" /><path d="M15.97 17.25l1.3 .75" /><path d="M20.733 20l1.3 .75" /></svg>
+              Usuario
+            </button></li>
                         
               
              
@@ -1544,7 +1563,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </button>
                     <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent
                      bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" data-hs-overlay="#hs-notifications">
-                     Actualizar notificaciones
+                     Actualizar configuraciones
                     <button>
                   </div>
                 </div>
@@ -2178,7 +2197,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" 
                             class="block text-sm text-gray-500 dark:text-neutral-500" 
                             data-src="https://gelatinartepaty.vercel.app/factura">           
-           Estado del sitio al 100%   
+                            https://gelatinartepaty.vercel.app/404 
                  </a>
                            
                           </div>
@@ -2557,6 +2576,535 @@ Optimización de imagenes: conversión, compresión y reajuste de tamaño
           </div>
         </div>
       </div>
+
+      
+<!-- Card Section -->
+<div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+
+
+
+  <!-- End Card Section --><div>
+  <style>
+  .label {	display: block;
+    margin-bottom: .25rem;
+  }
+  
+  label {
+    /*font-size: .85rem;*/
+    font-weight:bold;
+  }
+  
+  select[data-ss-uuid] {
+    display: none;
+    pointer-events: none; }
+  
+  .style-select {
+    display: block;
+    position: relative;
+    width: 140px; }
+    .style-select, .style-select * {
+      padding: 0;
+      margin: 0;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      text-align: left;
+      line-height: 19px;
+      color: black;
+      font-weight: 300;
+      cursor: pointer; }
+    .style-select .ss-selected-option {
+      width: 100%;
+      background-image: -webkit-linear-gradient(top, #fefefe, #f2f2f2);
+      background-image: linear-gradient(to bottom, #fefefe, #f2f2f2);
+      border-radius: 2px;
+      padding: 6px;
+      border: 1px solid #d0d0d0; }
+      .style-select .ss-selected-option::after {
+        content: "â–¾";
+        position: absolute;
+        top: 6px;
+        right: 12px;
+        display: block; }
+    .style-select .ss-dropdown {
+      top: 32px;
+      left: 0;
+      position: absolute;
+      float: left;
+      width: 100%;
+      display: none;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      border: 1px solid #d0d0d0;
+      border-top: 0 none; }
+      .style-select .ss-dropdown .ss-option {
+        width: 100%;
+        padding: 6px;
+        background-color: white; }
+        .style-select .ss-dropdown .ss-option.highlighted {
+          background-color: #f2f4f8; }
+        .style-select .ss-dropdown .ss-option.disabled {
+          color: #d0d0d0; }
+        .style-select .ss-dropdown .ss-option.ticked::before {
+          content: "âœ“";
+          padding-right: 3px; }
+    .style-select.open .ss-dropdown {
+      display: block; }
+    .style-select.open .ss-selected-option::after {
+      content: "â–´"; }
+  
+  .input{-webkit-appearance:none;-moz-appearance:none;appearance:none;box-sizing:border-box;width:100%;margin:0 0 .9rem;padding:.6rem;background:#fff;border:1px solid #bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);border-radius:0;outline:none;resize:vertical;transition:border-color .3s ease;color:#000;font-family:inherit;font-size:100%;line-height:1.15}.input[disabled]{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none;cursor:not-allowed;color:#0d0d0d}.input:focus{border-color:#17f}.input::-webkit-input-placeholder{color:#999;opacity:1}.input:-ms-input-placeholder{opacity:1}.input::-ms-input-placeholder{opacity:1}.input::placeholder{color:#999;opacity:1}.input:-ms-input-placeholder{color:#999}.input::-ms-input-placeholder{color:#999}.control{margin:0 0 .9rem;box-sizing:border-box}.control__input{position:absolute;opacity:0;pointer-events:none}.control__label{display:flex;align-items:center;position:relative;color:#000}.control__label:after,.control__label:before{content:"";display:block;width:20px;height:20px;border:1px solid transparent}.control__label:before{flex-shrink:0;margin-right:.6rem;border-color:#bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);background:#fff}.control__label:after{position:absolute;top:calc(48% - 10px);left:0;background-size:60%;background-repeat:no-repeat;background-position:50%;-webkit-transform:scale(0);transform:scale(0);transition:-webkit-transform .3s ease;transition:transform .3s ease;transition:transform .3s ease,-webkit-transform .3s ease}.control__input[type=radio]+.control__label:before{border-radius:100%}.control__input[type=radio]+.control__label:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M256 464c114.9 0 208-93.1 208-208S370.9 48 256 48 48 141.1 48 256s93.1 208 208 208z'/%3E%3C/svg%3E")}.control__input[type=checkbox]+.control__label:after{background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M461.6 109.6l-54.9-43.3c-1.7-1.4-3.8-2.4-6.2-2.4-2.4 0-4.6 1-6.3 2.5L194.5 323s-78.5-75.5-80.7-77.7c-2.2-2.2-5.1-5.9-9.5-5.9s-6.4 3.1-8.7 5.4c-1.7 1.8-29.7 31.2-43.5 45.8-.8.9-1.3 1.4-2 2.1-1.2 1.7-2 3.6-2 5.7 0 2.2.8 4 2 5.7l2.8 2.6s139.3 133.8 141.6 136.1c2.3 2.3 5.1 5.2 9.2 5.2 4 0 7.3-4.3 9.2-6.2l249.1-320c1.2-1.7 2-3.6 2-5.8 0-2.5-1-4.6-2.4-6.4z'/%3E%3C/svg%3E")}.control__input[type=checkbox][disabled]+.control__label,.control__input[type=radio][disabled]+.control__label{cursor:not-allowed;color:#0d0d0d}.control__input[type=checkbox][disabled]+.control__label:before,.control__input[type=radio][disabled]+.control__label:before{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none}.control__input:focus+.control__label:before{border-color:#17f}.control__input:checked+.control__label:after{-webkit-transform:scale(1);transform:scale(1)}.select{-webkit-appearance:none;-moz-appearance:none;appearance:none;box-sizing:border-box;margin:0 0 .9rem;padding:.6rem calc(.9rem + 12px) .6rem .6rem;width:100%;background:#fff;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512'%3E%3Cpath d='M256 298.3l174.2-167.2c4.3-4.2 11.4-4.1 15.8.2l30.6 29.9c4.4 4.3 4.5 11.3.2 15.5L264.1 380.9c-2.2 2.2-5.2 3.2-8.1 3-3 .1-5.9-.9-8.1-3L35.2 176.7c-4.3-4.2-4.2-11.2.2-15.5L66 131.3c4.4-4.3 11.5-4.4 15.8-.2L256 298.3z'/%3E%3C/svg%3E");background-size:12px;background-repeat:no-repeat;background-position:calc(100% - .6rem) 50%;border:1px solid #bbb;box-shadow:inset 0 1px 3px rgba(0,0,0,.05);border-radius:0;outline:0;color:#000;font-family:inherit;font-size:100%;line-height:1.15}.select[disabled]{border-color:#c8c8c8;background-color:#f2f2f2;box-shadow:none;cursor:not-allowed;color:#0d0d0d}.select:focus{border-color:#17f}.select::-ms-expand{display:none}
+  
+  input[type="range"] {
+   width: 100%;
+  }
+  
+  input[type="color"] {
+   width: 100%;
+  }
+  
+  
+  
+  </style>
+  <style>
+    
+  .ag-comm_btn {
+    height: 40px;
+    line-height: 39px;
+    min-width: 150px;
+    margin: 0;
+    padding: 0 25px;
+    border: 1px solid #015c8b;
+    background-color: #015c8b;
+  
+    cursor: pointer;
+  
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFF;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    -o-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+  
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  .ag-comm_btn:focus {
+    outline: none;
+  }
+  .ag-comm_btn:not(:disabled):hover {
+    border: 1px solid  #001119;
+    background-color:  #001119;
+  }
+  .ag-comm_btn:disabled {
+    border: 1px solid #bfbcbc;
+    background: #F4F1F1;
+    cursor: default;
+  
+    color: #525c69;
+  }
+            
+  .ag-comm_btn {
+    height: 40px;
+    line-height: 39px;
+    min-width: 150px;
+    margin: 0;
+    padding: 0 25px;
+    border: 1px solid #015c8b;
+    background-color: #015c8b;
+  
+    cursor: pointer;
+  
+    vertical-align: middle;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFF;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    -moz-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    -o-box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .25);
+  
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+  }
+  .ag-comm_btn:focus {
+    outline: none;
+  }
+  .ag-comm_btn:not(:disabled):hover {
+    border: 1px solid  #001119;
+    background-color:  #001119;  
+  }
+  .ag-comm_btn:disabled {
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: default;
+    color: #525c69; 
+  }
+    .ag-comm_btn-blink {
+    animation: blink 0.05s linear infinite;
+  }
+            .wait {
+    /*animation: blink 0.05s linear infinite;*/
+              text-shadow: 0 0 2px #333;
+    animation: pulsate 1s ease-out infinite;
+  }
+  
+  @keyframes blink {
+    0% { background-color: red; }
+    50% { background-color: pink; }
+    100% { background-color: yellow; }
+  }
+  @keyframes pulsate {
+    0% { text-shadow: 0 0 2px #333; }
+    50% { text-shadow: 0 0 10px #ccc; }
+    100% { text-shadow: 0 0 2px #333; }
+  }
+            .ag-comm_btn {
+    /* ...otras propiedades... */
+    
+  }
+  </style>
+  <form class="gform pure-form pure-form-stacked" method="POST" data-email="luis.el.de.las.tarjetas@gmail.com"
+    action="https://script.google.com/macros/s/AKfycbwOBg05h-H3-7sbFFr-aoVsgewy4ZGv-mfv-QJjqWbZpQigYd3AslrbLVe_aRRmxuR9zw/exec">
+      <div class="form-elements">
+        
+        <!-- Card -->
+      <div class="bg-white rounded-xl shadow dark:bg-neutral-900">
+        <div class="relative h-40 rounded-t-xl bg-[url('https://preline.co/assets/svg/examples/abstract-bg-1.svg')] bg-no-repeat bg-cover bg-center">
+          <div class="absolute top-0 end-0 p-4">
+            <button type="button" class="hidden py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+              <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+              Upload header
+            </button>
+          </div>
+        </div>
+  
+        <div class="pt-0 p-4 sm:pt-0 sm:p-7">
+          <!-- Grid -->
+          <div class="space-y-4 sm:space-y-6">
+            <div>
+              <label class="sr-only">
+                Product photo
+              </label>
+  
+              <div class="grid sm:flex sm:items-center sm:gap-x-5">
+                <img class="-mt-8 relative z-10 inline-block size-24 mx-auto sm:mx-0 rounded-full ring-4 ring-white dark:ring-neutral-900" 
+                src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
+  
+                <div class="mt-4 sm:mt-auto sm:mb-1.5 flex justify-center sm:justify-start gap-2">
+                  <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+                    <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/></svg>
+                    Subir logo
+                  </button>
+                  <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-red-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:hover:bg-neutral-800">
+                    Borrar
+                  </button>
+                </div>
+              </div>
+            </div>
+  
+            <div class="space-y-2">
+              <label for="describe_tu_idea" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
+                Nombre
+              </label>
+  
+              <input class="input"  id="js-comm_textarea"  name="describe_tu_idea"   type="text" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" 
+              placeholder="Nombre y apellido "><div id="js-comm_alert" style="display:none"></div>   
+            </div>
+                <div class="">     
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function() {
+                        const MIX_LENGTH = 1;
+                        const textarea = document.getElementById('js-comm_textarea');
+                        const button = document.getElementById('js-comm_btn');
+                      
+                        function insertAfter(referenceNode, newNode) {
+                          referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+                        }
+                      
+                        const div = document.createElement('div');
+                        div.className = 'js-comm_alert';
+                        div.id = 'js-comm_alert';
+                        div.innerHTML = '<div id="js-comm_count" class="js-ag-comm_count" hidden><span>0</span> / ' + MIX_LENGTH + '</div>';
+                        insertAfter(textarea, div);
+                      
+                        const count = document.getElementById('js-comm_count');
+                        const countSpan = count.querySelector('span');
+                      
+                        textarea.onkeyup = function() {
+                          countSpan.textContent = this.value.length;
+                      
+                          count.classList.remove('js-ag-comm_count__success');
+                      
+                          button.disabled = 'disabled';
+                      
+                          if (this.value.length >= MIX_LENGTH) {
+                            count.classList.add('js-ag-comm_count__success');
+                      
+                            button.disabled = "";
+                          }
+                        }; 
+                      
+                      });
+                    </script>
+              </div>  
+            <div class="space-y-2">
+              <label for="Email" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
+                Email
+              </label>
+  
+              <input id="Email" name="email"
+              type="email" class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg
+               focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 
+               dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="my@email.com">
+            </div>
+  
+            <div class="space-y-2 hidden">
+              <label for="af-submit-app-upload-images" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
+                Preview image
+              </label>
+  
+              <label for="af-submit-app-upload-images" class="group p-4 sm:p-7 block cursor-pointer text-center border-2 border-dashed border-gray-200 rounded-lg focus-within:outline-none focus-within:ring-2 focus-within:ring-blue-500 focus-within:ring-offset-2 dark:border-neutral-700">
+                <input id="af-submit-app-upload-images" name="af-submit-app-upload-images" type="file" class="sr-only">
+                <svg class="size-10 mx-auto text-gray-400 dark:text-neutral-600" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708l2-2z"/>
+                  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383zm.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/>
+                </svg>
+                <span class="mt-2 block text-sm text-gray-800 dark:text-neutral-200">
+                  Browse your device or <span class="group-hover:text-blue-700 text-blue-600">drag 'n drop'</span>
+                </span>
+                <span class="mt-1 block text-xs text-gray-500 dark:text-neutral-500">
+                  Maximum file size is 2 MB
+                </span>
+              </label>
+            </div>
+  
+            <div class="space-y-2 hidden">
+              <label for="af-submit-app-category" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
+                Category
+              </label>
+  
+              <select id="af-submit-app-category" class="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600">
+                <option selected>Select a category</option>
+                <option>Ecommerce</option>
+                <option>Finance</option>
+                <option>Marketplace</option>
+                <option>Social</option>
+                <option>Others</option>
+              </select>
+            </div>
+  
+            <div class="space-y-2">
+              <label for="Observaciones" class="inline-block text-sm font-medium text-gray-800 mt-2.5 dark:text-neutral-200">
+               Observaciones
+              </label>
+  
+              <textarea name="Observaciones" id="Observaciones" class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" rows="6" placeholder="A detailed summary will better explain your products to the audiences. Our users will see this in your dedicated product page."></textarea>
+            </div>
+          </div>
+          <!-- End Grid -->
+  
+
+          <div class="mt-5 flex justify-center gap-x-2">                                               
+            <button style="background:none; border:none">
+            <input id="js-comm_btn" type="submit" class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none ag-comm_btn" 
+            value=" Actualizar datos" disabled />
+  </button><br><span id="wait-message" class="wait"  style="display: none;">Espere un momento, por favor...</span>
+        </div>
+        </div>
+      </div>
+      <!-- End Card -->
+  
+      </div><!-- Thankyou_message --><br>
+      <div class="thankyou_message" style="display:none;"><br><br>
+        <h2>Actualizado</h2>   
+      </div>
+  </form>
+  <a href="https://docs.google.com/spreadsheets/d/1vBMsHX8RfJeUC-9K2ShArTr9uPftLbj6nyeHtwVUGl8/edit#gid=0"><!--function--></a>
+    <script data-cfasync="false" type="text/javascript"> // Función para validar el correo electrónico
+  function validEmail(email) {
+    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+    return re.test(email);
+  }
+  
+  // Función para manejar el envío del formulario
+  function handleFormSubmit(event) {
+    event.preventDefault(); // Prevenir el envío del formulario
+    var form = event.target;
+    var data = getFormData(form);
+  
+    // Guardar los datos del formulario en localStorage
+    localStorage.setItem('formData', JSON.stringify(data));
+  
+  
+    // Mostrar la leyenda de "espera"
+    var waitMessage = document.getElementById('wait-message');
+    waitMessage.style.display = 'block';
+  
+    if(data.email && !validEmail(data.email)) {
+      var invalidEmail = form.querySelector(".email-invalid");
+      if (invalidEmail) {
+        invalidEmail.style.display = "block";
+        return false;
+      }
+    } else {
+      disableAllButtons(form);
+      var url = form.action;
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', url);
+      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      xhr.onreadystatechange = function() {
+          console.log(xhr.status, xhr.statusText);
+          console.log(xhr.responseText);
+          var formElements = form.querySelector(".form-elements");
+          if (formElements) {
+            formElements.style.display = "none"; // ocultar formulario
+          }
+          var thankYouMessage = form.querySelector(".thankyou_message");
+          if (thankYouMessage) {
+            thankYouMessage.style.display = "block"; // mostrar mensaje de agradecimiento
+          }
+          waitMessage.style.display = 'none'; // ocultar leyenda de "espera"
+          return;
+      };
+      var encoded = Object.keys(data).map(function(k) {
+          return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+      }).join('&');
+      xhr.send(encoded);
+    }
+  }
+  
+  // Función para deshabilitar todos los botones del formulario
+  function disableAllButtons(form) {
+    var buttons = form.querySelectorAll("button");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].disabled = true;
+    }
+  }
+  
+  // Función para obtener los datos del formulario
+  function getFormData(form) {
+    var elements = form.elements;
+    var fields = Object.keys(elements).filter(function(k) {
+          return (elements[k].name !== "honeypot");
+    }).map(function(k) {
+      if(elements[k].name !== undefined) {
+        return elements[k].name;
+      } else if(elements[k].length > 0) {
+        return elements[k].item(0).name;
+      }
+    }).filter(function(item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
+  
+    var formData = {};
+    fields.forEach(function(name){
+      var element = elements[name];
+      formData[name] = element.value;
+      if (element.length) {
+        var data = [];
+        for (var i = 0; i < element.length; i++) {
+          var item = element.item(i);
+          if (item.checked || item.selected) {
+            data.push(item.value);
+          }
+        }
+        formData[name] = data.join(', ');
+      }
+    });
+  
+    formData.formDataNameOrder = JSON.stringify(fields);
+    formData.formGoogleSheetName = form.dataset.sheet || "Hoja 1"; // default sheet name
+    formData.formGoogleSendEmail = form.dataset.email || "";
+  
+    console.log(formData);
+    return formData;
+  }
+  
+  // Agregar el event listener al formulario para manejar el envío
+  document.addEventListener("DOMContentLoaded", function() {
+    var form = document.querySelector("form.gform");
+    form.addEventListener("submit", handleFormSubmit, false);
+  });
+      
+      // tiem
+      // Obtener el elemento que contiene la leyenda de "espera"
+  const waitMessage = document.getElementById('wait-message');
+  
+  // Mostrar la leyenda de "espera" cuando se envía el formulario
+  form.addEventListener('submit', function() {
+    waitMessage.style.display = 'block';
+    waitMessage.textContent = 'Espere un momento, por favor...';
+  
+    // Cambiar el texto después de 1.5 segundos
+    setTimeout(function() {
+      waitMessage.textContent = 'Ya casi estamos...';
+    }, 250);
+  
+    // Cambiar el texto después de 3 segundos más (4.5 segundos en total)
+    setTimeout(function() {
+      waitMessage.textContent = 'Gracias por tu paciencia...';
+    }, 500);
+  });
+  // Obtener el elemento del botón de enviar
+  const submitButton = document.getElementById('js-comm_btn');
+  
+  // Agregar el efecto de parpadeo cuando se envía el formulario
+  form.addEventListener('submit', function() {
+    submitButton.classList.add('ag-comm_btn-blink');
+  
+    // Quitar la clase de parpadeo después de un tiempo
+    setTimeout(function() {
+      submitButton.classList.remove('ag-comm_btn-blink');
+    }, 500); // 2 segundos, por ejemplo
+  }); 
+    </script>  
+    </div>
+  </div>
+
+<script>// Capturar los elementos del formulario
+  const form = document.querySelector('form');
+  const nombreInput = document.getElementById('af-submit-app-project-name');
+  const emailInput = document.getElementById('af-submit-project-url');
+  const observacionesInput = document.getElementById('af-submit-app-description');
+  
+  // Escuchar el evento submit del formulario
+  form.addEventListener('submit', function(event) {
+    // Prevenir el comportamiento por defecto del formulario
+    event.preventDefault();
+    
+    // Obtener los valores de los campos
+    const nombre = nombreInput.value;
+    const email = emailInput.value;
+    const observaciones = observacionesInput.value;
+  
+    // Guardar los valores en el localStorage
+    localStorage.setItem('nombre', nombre);
+    localStorage.setItem('email', email);
+    localStorage.setItem('observaciones', observaciones);
+  
+    // Mostrar un mensaje de éxito o realizar alguna otra acción
+    alert('Datos guardados correctamente en el localStorage');
+  });
+  </script>
+
+  
       <!-- End Card -->
       <div id="myModalFull" class="modalFull">
         <span class="closeModalFull">&times;</span>
@@ -2931,12 +3479,13 @@ Optimización de imagenes: conversión, compresión y reajuste de tamaño
         });
       })();
     });
-  </script> <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
+  </script> 
+  <!--span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
                           <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
                           </svg>
                           Warning
-                        </span>
+                        </span-->
   <!--  <span class="py-1 px-1.5 inline-flex items-center gap-x-1 text-xs font-medium bg-yellow-100 text-yellow-800 rounded-full dark:bg-yellow-500/10 dark:text-yellow-500">
                           <svg class="size-2.5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                             <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
