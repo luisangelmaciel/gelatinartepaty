@@ -763,7 +763,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       <div class="w-full flex items-center justify-end ms-auto sm:justify-between sm:gap-x-3 sm:order-3">
         <div class="sm:hidden">
-          <button type="button" class="w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700">
+          <button type="button" class="hidden w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700">
             <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="11" cy="11" r="8" />
               <path d="m21 21-4.3-4.3" />
@@ -771,19 +771,20 @@ document.addEventListener('DOMContentLoaded', function() {
           </button>
         </div>
 
-        <div class="hidden sm:block">
+        <div class="sm:block">
           <label for="icon" class="sr-only">Buscar</label>
-          <div class="relative min-w-72 md:min-w-80 ">
+          <div class="relative min-w-50 md:min-w-60 ">
             <div class="absolute inset-y-0 start-0 flex items-center pointer-events-none z-20 ps-4">
               <svg class="flex-shrink-0 size-4 text-gray-400 dark:text-neutral-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <circle cx="11" cy="11" r="8" />
                 <path d="m21 21-4.3-4.3" />
               </svg>
             </div>
-            <input type="text" id="icon" name="icon" class="py-2 px-4 ps-11 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Buscar">
+            <input type="text" id="icon" name="icon" class="py-2 px-4 ps-11 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+             placeholder="Buscar" >
           </div>
         </div>
-
+      &nbsp; 
         <div class="flex flex-row items-center justify-end gap-2">
           <button type="button" class="hidden w-[2.375rem] h-[2.375rem] inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-700">
             <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -1571,13 +1572,13 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
 
   <!-- Content -->
-  <div class="w-full lg:ps-64"  style="overflow-y:hidden">
+  <div class="w-full lg:ps-64"  style="overflow-y:hidden" id="Search">
   
    
     <div class="p-4 sm:p-6 space-y-4 sm:space-y-6" style="overflow-y:hidden">    
     
       <!-- Card -->
-      <div class="flex flex-col" style="z-index: 2">
+      <div class="flex flex-col searchable" style="z-index: 2">
         <div class="-m-1.5 overflow-x-auto">
           <div class="p-1.5 min-w-full inline-block align-middle">
             <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-neutral-800 dark:border-neutral-700">
@@ -1611,9 +1612,9 @@ document.addEventListener('DOMContentLoaded', function() {
               <!-- End Header -->
 
               <!-- Table -->
-              <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700">
+              <table class="min-w-full divide-y divide-gray-200 dark:divide-neutral-700 my-list" id="myLISTADO">
                 <thead class="bg-gray-50 dark:bg-neutral-800">
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <th scope="col" class="ps-6 py-3 text-start">
                       <label for="hs-at-with-checkboxes-main" class="flex">
                         <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-main">
@@ -1662,8 +1663,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
 
                   
-                  <tr>
-                    <td class="size-px whitespace-nowrap">
+                  <tr class="listado searchable-item activeli"  >
+                    <td class="size-px whitespace-nowrap ">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
                           <input type="checkbox" class="shrink-0 border-gray-300 rounded text-blue-600 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-600 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800" id="hs-at-with-checkboxes-1">
@@ -1724,7 +1725,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                   <!-- inicio -->
                   
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -1738,8 +1739,8 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="flex items-center gap-x-3">
                           <img class="inline-block size-[38px] rounded-full" src="https://gelatinartepaty.vercel.app/img/favicon.png" alt="Image Description">
                           <div class="grow">
-                            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200">FAQ</span>
-                            <span class="block text-sm text-gray-500 dark:text-neutral-500">https://gelatinartepaty.vercel.app/#FAQ</span>
+                            <span class="block text-sm font-semibold text-gray-800 dark:text-neutral-200 searchable-item">FAQ</span>
+                            <span class="block text-sm text-gray-500 dark:text-neutral-500 searchable-item">https://gelatinartepaty.vercel.app/#FAQ</span>
                           </div>
                         </div>
                       </div>
@@ -1781,7 +1782,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -1836,7 +1837,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                   </tr>
                   
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -1891,7 +1892,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                   </tr>
                   
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -1946,7 +1947,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                   </tr>
                   
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2004,7 +2005,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                   </tr>
 
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2063,7 +2064,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     </td>
                   </tr>
 
-  <tr>
+  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2121,7 +2122,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- -->
 
-  <tr>
+  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2178,7 +2179,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- --><!-- -->
 
-  <tr>
+  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2241,7 +2242,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <!-- -->
 
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-2" class="flex">
@@ -2297,7 +2298,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </tr>
 
                
-                  <tr>
+                  <tr class="listado searchable-item activeli">
                     <td class="size-px whitespace-nowrap">
                       <div class="ps-6 py-3">
                         <label for="hs-at-with-checkboxes-5" class="flex">
@@ -2355,7 +2356,7 @@ document.addEventListener('DOMContentLoaded', function() {
                   </tr>
                          <!-- -->
 
-  <tr>
+  <tr class="listado searchable-item activeli">
     <td class="size-px whitespace-nowrap">
       <div class="ps-6 py-3">
         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2418,7 +2419,7 @@ Estado del sitio al 100%
 
 <!-- -->  <!-- -->
 
-  <tr>
+  <tr class="listado searchable-item activeli">
     <td class="size-px whitespace-nowrap">
       <div class="ps-6 py-3">
         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -2480,7 +2481,7 @@ Estado del sitio al 100%
 
 <!-- -->        <!-- -->
 
-  <tr>
+  <tr class="listado searchable-item activeli">
     <td class="size-px whitespace-nowrap">
       <div class="ps-6 py-3">
         <label for="hs-at-with-checkboxes-1" class="flex">
@@ -3104,7 +3105,7 @@ Optimización de imagenes: conversión, compresión y reajuste de tamaño
   });
   </script>
 
-  
+
       <!-- End Card -->
       <div id="myModalFull" class="modalFull">
         <span class="closeModalFull">&times;</span>
@@ -3553,8 +3554,34 @@ document.querySelector('.modal-cerrar-1').addEventListener('click', function() {
 
 </script>
 
+<script>
+  // Función para realizar la búsqueda
+  function search() {
+    // Obtén el valor del campo de búsqueda
+    var searchText = document.getElementById('icon').value.toLowerCase();
+    
+    // Obtén todos los elementos buscables
+    var items = document.querySelectorAll('.searchable-item');
+    
+    // Itera sobre los elementos buscables
+    items.forEach(function(item) {
+      // Obtén el texto del elemento
+      var itemText = item.innerText.toLowerCase();
+      
+      // Comprueba si el texto del elemento contiene el texto de búsqueda
+      if (itemText.includes(searchText)) {
+        // Si el elemento coincide, muestra el elemento
+        item.style.display = 'block';
+      } else {
+        // Si el elemento no coincide, oculta el elemento
+        item.style.display = 'none';
+      }
+    });
+  }
 
-
+  // Agrega un listener para el evento keyup en el campo de búsqueda
+  document.getElementById('icon').addEventListener('keyup', search);
+</script>
 
 </div>
 </div>
