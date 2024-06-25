@@ -372,265 +372,265 @@ input[type="color"] {
                 <div class="mt-5">                  
                   <!-- Form -->                   
         <form id="form">  
-<div>
-<form class="gform pure-form pure-form-stacked" method="POST" data-email="luis.el.de.las.tarjetas@gmail.com"
-  action="https://script.google.com/macros/s/AKfycbwOBg05h-H3-7sbFFr-aoVsgewy4ZGv-mfv-QJjqWbZpQigYd3AslrbLVe_aRRmxuR9zw/exec">
-    <div class="form-elements">
-                          
+                <div>
+                <form class="gform pure-form pure-form-stacked" method="POST" data-email="luis.el.de.las.tarjetas@gmail.com"
+                  action="https://script.google.com/macros/s/AKfycbwOBg05h-H3-7sbFFr-aoVsgewy4ZGv-mfv-QJjqWbZpQigYd3AslrbLVe_aRRmxuR9zw/exec">
+                    <div class="form-elements">
+                                          
 
-   
+                  
 
-    <!-- Thankyou_message --><br>
-    <div class="thankyou_message" style="display:none;"><br><br>
-      <h2>Iniciando sesión....</h2>   
-    </div>
-
-<a href="https://docs.google.com/spreadsheets/d/1vBMsHX8RfJeUC-9K2ShArTr9uPftLbj6nyeHtwVUGl8/edit#gid=0"><!--function--></a>
-  <script data-cfasync="false" type="text/javascript"> // Función para validar el correo electrónico
-function validEmail(email) {
-  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-  return re.test(email);
-}
-
-// Función para manejar el envío del formulario
-function handleFormSubmit(event) {
-  event.preventDefault(); // Prevenir el envío del formulario
-  var form = event.target;
-  var data = getFormData(form);
-
-  // Guardar los datos del formulario en localStorage
-  localStorage.setItem('formData', JSON.stringify(data));
-
-
-  // Mostrar la leyenda de "espera"
-  var waitMessage = document.getElementById('wait-message');
-  waitMessage.style.display = 'block';
-
-  if(data.email && !validEmail(data.email)) {
-    var invalidEmail = form.querySelector(".email-invalid");
-    if (invalidEmail) {
-      invalidEmail.style.display = "block";
-      return false;
-    }
-  } else {
-    disableAllButtons(form);
-    var url = form.action;
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', url);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        console.log(xhr.status, xhr.statusText);
-        console.log(xhr.responseText);
-        var formElements = form.querySelector(".form-elements");
-        if (formElements) {
-          formElements.style.display = "none"; // ocultar formulario
-        }
-        var thankYouMessage = form.querySelector(".thankyou_message");
-        if (thankYouMessage) {
-          thankYouMessage.style.display = "block"; // mostrar mensaje de agradecimiento
-        }
-        waitMessage.style.display = 'none'; // ocultar leyenda de "espera"
-        return;
-    };
-    var encoded = Object.keys(data).map(function(k) {
-        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-    }).join('&');
-    xhr.send(encoded);
-  }
-}
-
-// Función para deshabilitar todos los botones del formulario
-function disableAllButtons(form) {
-  var buttons = form.querySelectorAll("button");
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].disabled = true;
-  }
-}
-
-// Función para obtener los datos del formulario
-function getFormData(form) {
-  var elements = form.elements;
-  var fields = Object.keys(elements).filter(function(k) {
-        return (elements[k].name !== "honeypot");
-  }).map(function(k) {
-    if(elements[k].name !== undefined) {
-      return elements[k].name;
-    } else if(elements[k].length > 0) {
-      return elements[k].item(0).name;
-    }
-  }).filter(function(item, pos, self) {
-    return self.indexOf(item) == pos && item;
-  });
-
-  var formData = {};
-  fields.forEach(function(name){
-    var element = elements[name];
-    formData[name] = element.value;
-    if (element.length) {
-      var data = [];
-      for (var i = 0; i < element.length; i++) {
-        var item = element.item(i);
-        if (item.checked || item.selected) {
-          data.push(item.value);
-        }
-      }
-      formData[name] = data.join(', ');
-    }
-  });
-
-  formData.formDataNameOrder = JSON.stringify(fields);
-  formData.formGoogleSheetName = form.dataset.sheet || "Hoja 1"; // default sheet name
-  formData.formGoogleSendEmail = form.dataset.email || "";
-
-  console.log(formData);
-  return formData;
-}
-
-// Agregar el event listener al formulario para manejar el envío
-document.addEventListener("DOMContentLoaded", function() {
-  var form = document.querySelector("form.gform");
-  form.addEventListener("submit", handleFormSubmit, false);
-});
-    
-    // tiem
-    // Obtener el elemento que contiene la leyenda de "espera"
-const waitMessage = document.getElementById('wait-message');
-
-// Mostrar la leyenda de "espera" cuando se envía el formulario
-form.addEventListener('submit', function() {
-  waitMessage.style.display = 'block';
-  waitMessage.textContent = 'Espere un momento, por favor...';
-
-  // Cambiar el texto después de 1.5 segundos
-  setTimeout(function() {
-    waitMessage.textContent = 'Ya casi estamos...';
-  }, 250);
-
-  // Cambiar el texto después de 3 segundos más (4.5 segundos en total)
-  setTimeout(function() {
-    waitMessage.textContent = 'Gracias por tu paciencia...';
-  }, 500);
-});
-// Obtener el elemento del botón de enviar
-const submitButton = document.getElementById('js-comm_btn');
-
-// Agregar el efecto de parpadeo cuando se envía el formulario
-form.addEventListener('submit', function() {
-  submitButton.classList.add('ag-comm_btn-blink');
-
-  // Quitar la clase de parpadeo después de un tiempo
-  setTimeout(function() {
-    submitButton.classList.remove('ag-comm_btn-blink');
-  }, 500); // 2 segundos, por ejemplo
-}); 
-
-
-
-  </script>
-  
-  </div>
-                        <div class="grid gap-y-4">
-                      <!-- Form Group -->
-                     
-                               
-        <div class="text">
-    <label class="label block text-sm mb-2 dark:text-white" for="js-comm_textarea">Usuario</label>
-         <div class="relative">
-                          <input type="text" id="js-comm_textarea"  name="describe_tu_idea"   placeholder="Usuario" 
-                          class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" 
-                          required aria-describedby="email-error" required>
-                          <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                            <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <p class="hidden text-xs text-red-600 mt-2" id="email-error">Por favor, agrega un email valido para que podamos contactarte.</p>
-<div id="js-comm_alert" style="display:none"></div>    
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const MIX_LENGTH = 1;
-  const textarea = document.getElementById('js-comm_textarea');
-  const button = document.getElementById('js-comm_btn');
-
-  function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-  }
-
-  const div = document.createElement('div');
-  div.className = 'js-comm_alert';
-  div.id = 'js-comm_alert';
-  div.innerHTML = '<div id="js-comm_count" class="js-ag-comm_count" hidden><span>0</span> / ' + MIX_LENGTH + '</div>';
-  insertAfter(textarea, div);
-
-  const count = document.getElementById('js-comm_count');
-  const countSpan = count.querySelector('span');
-
-  textarea.onkeyup = function() {
-    countSpan.textContent = this.value.length;
-
-    count.classList.remove('js-ag-comm_count__success');
-
-    button.disabled = 'disabled';
-
-    if (this.value.length >= MIX_LENGTH) {
-      count.classList.add('js-ag-comm_count__success');
-
-      button.disabled = "";
-    }
-  }; 
-
-});</script>
-                      <br>
-                      <!-- End Form Group -->
-        
-                      <!-- Form Group -->
-                      <div>
-                        <div class="flex justify-between items-center">
-                          <label for="password" class="block text-sm mb-2 dark:text-white">Password</label>
-                          <span class="text-sm text-blue-600 decoration-2 hover:underline font-medium">
-                            <button type="button" data-hs-overlay="#hs-modal-recover-account">
-                            ¿Olvidaste la contraseña?
-                          </button></span>                                                   
-                        </div>
-                        <div class="relative">                       
-                          <input type="password" id="password" required name="password" placeholder="Password"
-                          class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required aria-describedby="password-error">
-                          <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
-                            <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
-                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-                            </svg>
-                          </div>
-                        </div>
-                        <p class="hidden text-xs text-red-600 mt-2" id="password-error">8 caracteres o más</p>
-                      </div>
-                      <!-- End Form Group -->        <br>
-                      <!-- Checkbox -->
-                      <div class="flex items-center">
-                        <div class="flex">
-                          <input id="rememberMe" name="rememberMe" type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
-                        </div>
-                        <div class="ms-3">                      
-                          <label for="rememberMe" class="text-sm dark:text-white">Recuerdame</label>
-                        </div>
-                        <div>
-      
-                                              
-                         </div>
-                      </div>
-                      <!-- End Checkbox -->
-       <br>
-
-                      <button type="submit" 
-                      id="js-comm_btn"class="ag-comm_btn w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                        Iniciar sesión                              
-                              </button> 
-                        <p id="error" style="color: red; display: none;">Contraseña incorrecta</p>
-                        <span id="wait-message" class="wait"  style="display: none;">Espere un momento, por favor...</span>
+                    <!-- Thankyou_message --><br>
+                    <div class="thankyou_message" style="display:none;"><br><br>
+                      <h2>Iniciando sesión....</h2>   
                     </div>
-                       </div>
-    </div>
+
+                <a href="https://docs.google.com/spreadsheets/d/1vBMsHX8RfJeUC-9K2ShArTr9uPftLbj6nyeHtwVUGl8/edit#gid=0"><!--function--></a>
+                  <script data-cfasync="false" type="text/javascript"> // Función para validar el correo electrónico
+                function validEmail(email) {
+                  var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                  return re.test(email);
+                }
+
+                // Función para manejar el envío del formulario
+                function handleFormSubmit(event) {
+                  event.preventDefault(); // Prevenir el envío del formulario
+                  var form = event.target;
+                  var data = getFormData(form);
+
+                  // Guardar los datos del formulario en localStorage
+                  localStorage.setItem('formData', JSON.stringify(data));
+
+
+                  // Mostrar la leyenda de "espera"
+                  var waitMessage = document.getElementById('wait-message');
+                  waitMessage.style.display = 'block';
+
+                  if(data.email && !validEmail(data.email)) {
+                    var invalidEmail = form.querySelector(".email-invalid");
+                    if (invalidEmail) {
+                      invalidEmail.style.display = "block";
+                      return false;
+                    }
+                  } else {
+                    disableAllButtons(form);
+                    var url = form.action;
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', url);
+                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    xhr.onreadystatechange = function() {
+                        console.log(xhr.status, xhr.statusText);
+                        console.log(xhr.responseText);
+                        var formElements = form.querySelector(".form-elements");
+                        if (formElements) {
+                          formElements.style.display = "none"; // ocultar formulario
+                        }
+                        var thankYouMessage = form.querySelector(".thankyou_message");
+                        if (thankYouMessage) {
+                          thankYouMessage.style.display = "block"; // mostrar mensaje de agradecimiento
+                        }
+                        waitMessage.style.display = 'none'; // ocultar leyenda de "espera"
+                        return;
+                    };
+                    var encoded = Object.keys(data).map(function(k) {
+                        return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                    }).join('&');
+                    xhr.send(encoded);
+                  }
+                }
+
+                // Función para deshabilitar todos los botones del formulario
+                function disableAllButtons(form) {
+                  var buttons = form.querySelectorAll("button");
+                  for (var i = 0; i < buttons.length; i++) {
+                    buttons[i].disabled = true;
+                  }
+                }
+
+                // Función para obtener los datos del formulario
+                function getFormData(form) {
+                  var elements = form.elements;
+                  var fields = Object.keys(elements).filter(function(k) {
+                        return (elements[k].name !== "honeypot");
+                  }).map(function(k) {
+                    if(elements[k].name !== undefined) {
+                      return elements[k].name;
+                    } else if(elements[k].length > 0) {
+                      return elements[k].item(0).name;
+                    }
+                  }).filter(function(item, pos, self) {
+                    return self.indexOf(item) == pos && item;
+                  });
+
+                  var formData = {};
+                  fields.forEach(function(name){
+                    var element = elements[name];
+                    formData[name] = element.value;
+                    if (element.length) {
+                      var data = [];
+                      for (var i = 0; i < element.length; i++) {
+                        var item = element.item(i);
+                        if (item.checked || item.selected) {
+                          data.push(item.value);
+                        }
+                      }
+                      formData[name] = data.join(', ');
+                    }
+                  });
+
+                  formData.formDataNameOrder = JSON.stringify(fields);
+                  formData.formGoogleSheetName = form.dataset.sheet || "Hoja 1"; // default sheet name
+                  formData.formGoogleSendEmail = form.dataset.email || "";
+
+                  console.log(formData);
+                  return formData;
+                }
+
+                // Agregar el event listener al formulario para manejar el envío
+                document.addEventListener("DOMContentLoaded", function() {
+                  var form = document.querySelector("form.gform");
+                  form.addEventListener("submit", handleFormSubmit, false);
+                });
+                    
+                    // tiem
+                    // Obtener el elemento que contiene la leyenda de "espera"
+                const waitMessage = document.getElementById('wait-message');
+
+                // Mostrar la leyenda de "espera" cuando se envía el formulario
+                form.addEventListener('submit', function() {
+                  waitMessage.style.display = 'block';
+                  waitMessage.textContent = 'Espere un momento, por favor...';
+
+                  // Cambiar el texto después de 1.5 segundos
+                  setTimeout(function() {
+                    waitMessage.textContent = 'Ya casi estamos...';
+                  }, 250);
+
+                  // Cambiar el texto después de 3 segundos más (4.5 segundos en total)
+                  setTimeout(function() {
+                    waitMessage.textContent = 'Gracias por tu paciencia...';
+                  }, 500);
+                });
+                // Obtener el elemento del botón de enviar
+                const submitButton = document.getElementById('js-comm_btn');
+
+                // Agregar el efecto de parpadeo cuando se envía el formulario
+                form.addEventListener('submit', function() {
+                  submitButton.classList.add('ag-comm_btn-blink');
+
+                  // Quitar la clase de parpadeo después de un tiempo
+                  setTimeout(function() {
+                    submitButton.classList.remove('ag-comm_btn-blink');
+                  }, 500); // 2 segundos, por ejemplo
+                }); 
+
+
+
+                  </script>
+                  
+                  </div>
+                                        <div class="grid gap-y-4">
+                                      <!-- Form Group -->
+                                    
+                                              
+                        <div class="text">
+                    <label class="label block text-sm mb-2 dark:text-white" for="js-comm_textarea">Usuario</label>
+                        <div class="relative">
+                                          <input type="text" id="js-comm_textarea"  name="describe_tu_idea"   placeholder="Usuario" 
+                                          class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" 
+                                          required aria-describedby="email-error" required>
+                                          <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                                            <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <p class="hidden text-xs text-red-600 mt-2" id="email-error">Por favor, agrega un email valido para que podamos contactarte.</p>
+                <div id="js-comm_alert" style="display:none"></div>    
+
+                <script>
+                document.addEventListener('DOMContentLoaded', function() {
+                  const MIX_LENGTH = 1;
+                  const textarea = document.getElementById('js-comm_textarea');
+                  const button = document.getElementById('js-comm_btn');
+
+                  function insertAfter(referenceNode, newNode) {
+                    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+                  }
+
+                  const div = document.createElement('div');
+                  div.className = 'js-comm_alert';
+                  div.id = 'js-comm_alert';
+                  div.innerHTML = '<div id="js-comm_count" class="js-ag-comm_count" hidden><span>0</span> / ' + MIX_LENGTH + '</div>';
+                  insertAfter(textarea, div);
+
+                  const count = document.getElementById('js-comm_count');
+                  const countSpan = count.querySelector('span');
+
+                  textarea.onkeyup = function() {
+                    countSpan.textContent = this.value.length;
+
+                    count.classList.remove('js-ag-comm_count__success');
+
+                    button.disabled = 'disabled';
+
+                    if (this.value.length >= MIX_LENGTH) {
+                      count.classList.add('js-ag-comm_count__success');
+
+                      button.disabled = "";
+                    }
+                  }; 
+
+                });</script>
+                                      <br>
+                                      <!-- End Form Group -->
+                        
+                                      <!-- Form Group -->
+                                      <div>
+                                        <div class="flex justify-between items-center">
+                                          <label for="password" class="block text-sm mb-2 dark:text-white">Password</label>
+                                          <span class="text-sm text-blue-600 decoration-2 hover:underline font-medium">
+                                            <button type="button" data-hs-overlay="#hs-modal-recover-account">
+                                            ¿Olvidaste la contraseña?
+                                          </button></span>                                                   
+                                        </div>
+                                        <div class="relative">                       
+                                          <input type="password" id="password" required name="password" placeholder="Password"
+                                          class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" required aria-describedby="password-error">
+                                          <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
+                                            <svg class="size-5 text-red-500" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4zm.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+                                            </svg>
+                                          </div>
+                                        </div>
+                                        <p class="hidden text-xs text-red-600 mt-2" id="password-error">8 caracteres o más</p>
+                                      </div>
+                                      <!-- End Form Group -->        <br>
+                                      <!-- Checkbox -->
+                                      <div class="flex items-center">
+                                        <div class="flex">
+                                          <input id="rememberMe" name="rememberMe" type="checkbox" class="shrink-0 mt-0.5 border-gray-200 rounded text-blue-600 focus:ring-blue-500 dark:bg-neutral-800 dark:border-neutral-700 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800">
+                                        </div>
+                                        <div class="ms-3">                      
+                                          <label for="rememberMe" class="text-sm dark:text-white">Recuerdame</label>
+                                        </div>
+                                        <div>
+                      
+                                                              
+                                        </div>
+                                      </div>
+                                      <!-- End Checkbox -->
+                      <br>
+
+                                      <button type="submit" 
+                                      id="js-comm_btn"class="ag-comm_btn w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                        Iniciar sesión                              
+                                              </button> 
+                                        <p id="error" style="color: red; display: none;">Contraseña incorrecta</p>
+                                        <span id="wait-message" class="wait"  style="display: none;">Espere un momento, por favor...</span>
+                                    </div>
+                                      </div>
+                    </div>
                   </form>
                   <!-- End Form -->
                 </div>
@@ -836,7 +836,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="text-sm font-medium text-gray-800 dark:text-neutral-300">gelatinartepaty.vercel.app</p>
               </div>
               <div class="mt-2 py-2 first:pt-0 last:pb-0">
-                <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="#">
+                <a target="_blank" class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-neutral-400 dark:hover:bg-neutral-700 dark:hover:text-neutral-300" href="https://luisangelmaciel.vercel.app/blog/2024-06-25-carta%20de%20servicio%20fria/">
                   <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
                     <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
@@ -1220,14 +1220,17 @@ document.addEventListener('DOMContentLoaded', function() {
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-invoice flex-shrink-0 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M19 12v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-14a2 2 0 0 1 2 -2h7l5 5v4.25" /></svg>
             Nota de pago
           </a></li>
-          <li><a href="#ServiciosContratados" data-src="#" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
+          <li><a href="#ServiciosContratados" data-src="https://luisangelmaciel.vercel.app/blog/2024-06-25-carta%20de%20servicio%20fria/" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink">
             <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
               <path d="M3 6h18" />
               <path d="M16 10a4 4 0 0 1-8 0" />
             </svg>
             Servicios contratados
-          </a></li>
+          </a></li>          
+          
+
+
           
           <li><a href="#Estado del sitio"  data-src="https://gelatinartepaty.vercel.app/estado-del-sitio" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">
          
@@ -1336,7 +1339,145 @@ document.addEventListener('DOMContentLoaded', function() {
               Usuario
             </a></li>
                         
-              
+              <span  onclick="openWin()"></span>
+          <script>
+            let myWindow;
+            
+            function openWin() {
+              myWindow = window.open("https://gelatinartepaty.vercel.app/factura", "_blank", "width=300px");
+            }
+            
+            function closeWin() {
+              myWindow.close();
+            }
+            </script>
+        <li><form class="gform pure-form pure-form-stacked" method="POST" data-email="luis.el.de.las.tarjetas@gmail.com"
+          action="https://script.google.com/macros/s/AKfycbwOBg05h-H3-7sbFFr-aoVsgewy4ZGv-mfv-QJjqWbZpQigYd3AslrbLVe_aRRmxuR9zw/exec">
+          <div class="form-elements">
+            <div>
+              <div class="text">
+                <input type="hidden" id="EmailTitle" name="EmailTitle" value=" ✔️Lectura de Servicios Contratados">
+                <input class="input" type="text" inputmode="text" value="https://gelatinartepaty.vercel.app/login#serviciosContratados" id="origen" name="origen" hidden>
+              </div>
+              <button style="background:none; border:none"  onclick="openWin()">
+                <input id="js-comm_btn w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-300" type="submit" 
+                value="Nota de pago" />
+                <a href=#NotaDePago" class="modalLink w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-neutral-700 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-900 
+                dark:text-neutral-400 dark:hover:text-neutral-300 modalLink" data-src="https://gelatinartepaty.vercel.app/factura">            
+                <svg   xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" 
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-invoice flex-shrink-0 size-4"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 3v4a1 1 0 0 0 1 1h4" /><path d="M19 12v7a1.78 1.78 0 0 1 -3.1 1.4a1.65 1.65 0 0 0 -2.6 0a1.65 1.65 0 0 1 -2.6 0a1.65 1.65 0 0 0 -2.6 0a1.78 1.78 0 0 1 -3.1 -1.4v-14a2 2 0 0 1 2 -2h7l5 5v4.25" /></svg>
+                Nota de pago</a>
+              </button>
+              <br>
+              <span id="wait-message" class="wait" style="display: none;">Espere un momento, por favor...</span>
+            </div>
+          </div>
+          <div class="thankyou_message" style="display:none;"> </div>
+        </form>     
+        </li>   
+               
+                    
+        
+          <script data-cfasync="false" type="text/javascript">
+            function validEmail(email) {
+              var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+              return re.test(email);
+            }
+          
+            function handleFormSubmit(event) {
+              event.preventDefault();
+              var form = event.target;
+              var data = getFormData(form);
+          
+              localStorage.setItem('formData', JSON.stringify(data));
+          
+              var waitMessage = document.getElementById('wait-message');
+              waitMessage.style.display = 'block';
+          
+              if (data.email && !validEmail(data.email)) {
+                var invalidEmail = form.querySelector(".email-invalid");
+                if (invalidEmail) {
+                  invalidEmail.style.display = "block";
+                  return false;
+                }
+              } else {
+                disableAllButtons(form);
+                var url = form.action;
+                var xhr = new XMLHttpRequest();
+                xhr.open('POST', url);
+                xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhr.onreadystatechange = function () {
+                  console.log(xhr.status, xhr.statusText);
+                  console.log(xhr.responseText);
+                  var formElements = form.querySelector(".form-elements");
+                  if (formElements) {
+                    formElements.style.display = "none";
+                  }
+                  var thankYouMessage = form.querySelector(".thankyou_message");
+                  if (thankYouMessage) {
+                    thankYouMessage.style.display = "block";
+                  }
+                  waitMessage.style.display = 'none';
+                  return;
+                };
+                var encoded = Object.keys(data).map(function (k) {
+                  return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                }).join('&');
+                xhr.send(encoded);
+              }
+            }
+          
+            function disableAllButtons(form) {
+              var buttons = form.querySelectorAll("button");
+              for (var i = 0; i < buttons.length; i++) {
+                buttons[i].disabled = true;
+              }
+            }
+          
+            function getFormData(form) {
+              var elements = form.elements;
+              var fields = Object.keys(elements).filter(function (k) {
+                return (elements[k].name !== "honeypot");
+              }).map(function (k) {
+                if (elements[k].name !== undefined) {
+                  return elements[k].name;
+                } else if (elements[k].length > 0) {
+                  return elements[k].item(0).name;
+                }
+              }).filter(function (item, pos, self) {
+                return self.indexOf(item) == pos && item;
+              });
+          
+              var formData = {};
+              fields.forEach(function (name) {
+                var element = elements[name];
+                formData[name] = element.value;
+                if (element.length) {
+                  var data = [];
+                  for (var i = 0; i < element.length; i++) {
+                    var item = element.item(i);
+                    if (item.checked || item.selected) {
+                      data.push(item.value);
+                    }
+                  }
+                  formData[name] = data.join(', ');
+                }
+              });
+          
+              formData.formDataNameOrder = JSON.stringify(fields);
+              formData.formGoogleSheetName = form.dataset.sheet || "Hoja 1";
+              formData.formGoogleSendEmail = form.dataset.email || "";
+          
+              console.log(formData);
+              return formData;
+            }
+          
+            document.addEventListener("DOMContentLoaded", function () {
+              var form = document.querySelector("form.gform");
+              form.addEventListener("submit", handleFormSubmit, false);
+            });
+          </script>
+          
              
 
             
@@ -1586,7 +1727,27 @@ document.addEventListener('DOMContentLoaded', function() {
    
     <div class="p-4 sm:p-6 space-y-4 sm:space-y-6" style="overflow-y:hidden">    
     
-      <!-- Card -->
+      <div class="flex flex-col searchable" style="z-index: 2; display:none">
+        <div class="-m-1.5 overflow-x-auto">
+          <div class="p-1.5 min-w-full inline-block align-middle">
+            <div class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-neutral-800 dark:border-neutral-700">
+              <!-- Header -->
+              <div class="px-6 py-4 grid gap-3 md:flex md:justify-between md:items-center border-b border-gray-200 dark:border-neutral-700">
+                <div>
+                  <h2 class="text-xl font-semibold text-gray-800 dark:text-neutral-200">
+                    Secciones y contenido
+                  </h2>
+                  <p class="text-sm text-gray-600 dark:text-neutral-400">
+                    Entregables de cada sección y detalles de la investigación de contenido.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        <!-- Card -->
       <div class="flex flex-col searchable" style="z-index: 2">
         <div class="-m-1.5 overflow-x-auto">
           <div class="p-1.5 min-w-full inline-block align-middle">
