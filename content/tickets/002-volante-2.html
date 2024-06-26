@@ -1,0 +1,225 @@
+<div class="absolute top-2 end-2">
+    <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700" data-hs-overlay="#hs-task-created-alert" onclick="history.back()">
+     <span class="sr-only">Cerrar</span>
+     <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+     </svg>
+    </button>
+   </div>
+   
+   <div class="size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto hidden" style="background-color:black; " id="thankyou-message">
+    <div class="sm:w-full m-3 sm:mx-auto">
+     <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+      <div class="absolute top-2 end-2">
+       <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700" data-hs-overlay="#hs-task-created-alert" onclick="history.back()">
+        <span class="sr-only">Cerrar</span>
+        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <path d="M18 6 6 18" />
+         <path d="m6 6 12 12" />
+        </svg>
+       </button>
+      </div>
+   
+      <div class="p-4 sm:p-10 text-center overflow-y-auto">
+       <!-- Icon -->
+       <span class="mb-4 inline-flex justify-center items-center size-[46px] rounded-full border-4 border-green-50 bg-green-100 text-green-500 dark:bg-green-700 dark:border-green-600 dark:text-green-100">
+        <svg class="flex-shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+         <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
+        </svg>
+       </span>
+       <!-- End Icon -->
+   
+       <h3 class="mb-2 text-xl font-bold text-gray-800 dark:text-neutral-200">
+        Solicitud enviada con éxito
+       </h3>
+       <p class="text-gray-500 dark:text-neutral-500">
+        En 15 minutos se actualizaran los datos en el <a class="inline-flex items-center gap-x-1.5 text-blue-600 decoration-2 hover:underline font-medium dark:text-blue-500" href="javascript:history.back()">panel de control</a> Gracias.
+       </p>
+   
+       <div class="mt-6 flex justify-center gap-x-4">
+        <button type="button" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-800 dark:text-white dark:hover:bg-neutral-800" onclick="history.back()">
+         Regresar
+        </button>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   
+   <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css?v=2.3.0">
+   <!-- Theme Check and Update -->
+   <script>
+    const html = document.querySelector('html');
+    const isLightOrAuto = localStorage.getItem('hs_theme') === 'light' || (localStorage.getItem('hs_theme') === 'auto' && !window.matchMedia('(prefers-color-scheme: dark)').matches);
+    const isDarkOrAuto = localStorage.getItem('hs_theme') === 'dark' || (localStorage.getItem('hs_theme') === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches);
+    if (isLightOrAuto && html.classList.contains('dark')) html.classList.remove('dark');
+    else if (isDarkOrAuto && html.classList.contains('light')) html.classList.remove('light');
+    else if (isDarkOrAuto && !html.classList.contains('dark')) html.classList.add('dark');
+    else if (isLightOrAuto && !html.classList.contains('light')) html.classList.add('light');
+   </script>
+   <!-- Apexcharts -->
+   <link rel="stylesheet" href="https://preline.co//assets/vendor/apexcharts/dist/apexcharts.css">
+   <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div class="mt-5 p-4 relative z-10 bg-white border rounded-xl sm:mt-10 md:p-10 dark:bg-neutral-900 dark:border-neutral-700">
+     <style>
+      .hidden {
+       display: none;
+      }
+   
+      #thankyou-message {
+       /*  margin-top: 20px;
+      padding: 10px;
+      background-color: #e6f7ff;
+      border: 1px solid #91d5ff;
+      border-radius: 4px;*/
+      }
+     </style>
+     <form id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxTGK4gTASuWPs8s9LXAssHPcgWl9vdA0p-f5XthELqmYwbx2ZCu-r5HkqoljPMG9LOnw/exec">
+      <input type="hidden" id="emailSubject" name="emailSubject" value="⚠️ Nuevo requerimiento">
+      <d class="">
+       <div>
+        <div>
+         <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+          <div class="p-4 sm:p-14  overflow-y-auto">
+           <img class="mb-4 w-20 h-auto mx-auto text-center" width="72" height="63" src="https://materias-primas-paty.vercel.app/img/flyer-paty-svg.svg" data-hs-overlay="#hs-sign-out-alert-small-window">
+   
+           <h3 class="text-center mb-2 text-2xl font-bold text-gray-800 dark:text-neutral-200">
+            Volante media carta
+           </h3>
+           <p class="text-gray-500 dark:text-neutral-500 text-center">
+            Favor de confirmar información para proceder con el diseño
+           </p><br <div class="mb-4 sm:mb-8">
+           <label for="Solicitud" class="block mb-2 text-sm font-medium dark:text-white">Solicitud</label>
+           <input type="text" id="hs-feedback-post-comment-name-1" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" id="Solicitud" name="Solicitud" placeholder="Volante de media carta de un lado los productos de Materias primas y del otro de Burbulimpia">
+          </div>
+   
+          <div>
+           <label for="Requerimiento" class="block mb-2 text-sm font-medium dark:text-white">Explicar requerimiento</label>
+           <div class="mt-1">
+            <textarea id="Requerimiento" name="Requerimiento" rows="3" class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600" placeholder="Por favor exploque los detalles"></textarea>
+           </div>
+          </div>
+   
+         </div><br>
+   
+         <div class="flex items-center">
+          <button id="submit-button" type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-es-xl border border-transparent bg-gray-100 text-gray-800 hover:bg-gray-200 disabled:opacity-50 disabled:pointer-events-none dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:hover:text-white">
+           <span id="button-text">Aprobar</span>
+           <span id="wait-message" class="hidden">Espere un momento, por favor...</span>
+          </button>
+   
+          <button id="submit-button" type="submit" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-ee-xl border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+           <span id="button-text">Enviar cambios</span>
+           <span id="wait-message" class="hidden">Espere un momento, por favor...</span>
+          </button>
+         </div>
+        </div>
+       </div>
+    </div </form>
+    <div class="mt-6 grid">
+     <div id="thankyou-messagec" class="hidden"> <a href="javascript:history.back()" class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"> En 15 minutos apareceran los detalles de la solicitud
+      </a></div>
+    </div>
+   
+    <script data-cfasync="false" type="text/javascript">
+     document.addEventListener("DOMContentLoaded", function() {
+      const form = document.getElementById('gform');
+      const submitButton = document.getElementById('submit-button');
+      const buttonText = document.getElementById('button-text');
+      const waitMessage = document.getElementById('wait-message');
+      const thankYouMessage = document.getElementById('thankyou-message');
+      form.addEventListener("submit", handleFormSubmit);
+   
+      function handleFormSubmit(event) {
+       event.preventDefault();
+       const data = getFormData(form);
+       localStorage.setItem('formData', JSON.stringify(data));
+       setSubmitting(true);
+       const xhr = new XMLHttpRequest();
+       xhr.open('POST', form.action);
+       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+       xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4) {
+         console.log(xhr.status, xhr.statusText);
+         console.log(xhr.responseText);
+         setSubmitting(false);
+         showThankYouMessage();
+        }
+       };
+       const encoded = Object.keys(data).map(k =>
+        encodeURIComponent(k) + "=" + encodeURIComponent(data[k])
+       ).join('&');
+       xhr.send(encoded);
+      }
+   
+      function setSubmitting(isSubmitting) {
+       submitButton.disabled = isSubmitting;
+       buttonText.classList.toggle('hidden', isSubmitting);
+       waitMessage.classList.toggle('hidden', !isSubmitting);
+      }
+   
+      function showThankYouMessage() {
+       thankYouMessage.classList.remove('hidden');
+       // El mensaje de agradecimiento permanecerá visible
+      }
+   
+      function getFormData(form) {
+       const elements = form.elements;
+       const fields = Object.keys(elements).filter(k =>
+        elements[k].name !== "honeypot"
+       ).map(k =>
+        elements[k].name !== undefined ? elements[k].name :
+        elements[k].length > 0 ? elements[k].item(0).name : null
+       ).filter((item, pos, self) =>
+        item && self.indexOf(item) == pos
+       );
+       const formData = {};
+       fields.forEach(name => {
+        const element = elements[name];
+        formData[name] = element.value;
+        if (element.length) {
+         formData[name] = Array.from(element)
+          .filter(item => item.checked || item.selected)
+          .map(item => item.value)
+          .join(', ');
+        }
+       });
+       formData.formDataNameOrder = JSON.stringify(fields);
+       formData.formGoogleSheetName = form.dataset.sheet || "Accesos";
+       formData.formGoogleSendEmail = form.dataset.email || "luis.el.de.las.tarjetas@gmail.com";
+       formData.emailSubject = form.querySelector('#emailSubject').value || "";
+       return formData;
+      }
+     });
+    </script>
+   </div>
+   <!-- br><br><br><br><br><br>
+    <button class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none" onclick="history.back()" style="background-color:black">
+     Regresar
+    </button-->
+   </div>
+   
+   <div id="hs-sign-out-alert-small-window" class="hs-overlay hidden size-full fixed top-0 start-0 z-[80] overflow-x-hidden overflow-y-auto">
+    <div class="hs-overlay-open:mt-7 hs-overlay-open:opacity-100 hs-overlay-open:duration-500 mt-0 opacity-0 ease-out transition-all sm:max-w-xs sm:w-full m-3 sm:mx-auto">
+     <div class="relative flex flex-col bg-white shadow-lg rounded-xl dark:bg-neutral-900">
+      <div class="absolute top-2 end-2">
+       <button type="button" class="flex justify-center items-center size-7 text-sm font-semibold rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:border-transparent dark:hover:bg-neutral-700" data-hs-overlay="#hs-sign-out-alert-small-window">
+        <span class="sr-only">Close</span>
+        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+         <path d="M18 6 6 18" />
+         <path d="m6 6 12 12" />
+        </svg>
+       </button>
+      </div>
+   
+      <div class="p-4 sm:p-10 text-center overflow-y-auto">
+       <img class=" h-auto mx-auto text-center" width="100%" height="auto" src="https://materias-primas-paty.vercel.app/img/flyer-paty-svg.svg">
+   
+      </div>
+     </div>
+    </div>
+   </div>
+   
+   <link rel="stylesheet" href="https://preline.co/assets/css/main.min.css?v=2.3.0">
+   <script src="https://preline.co/assets/vendor/preline/dist/index.js?v=2.3.0"></script>
